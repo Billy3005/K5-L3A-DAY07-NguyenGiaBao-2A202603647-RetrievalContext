@@ -233,11 +233,16 @@ Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất,
 - **Benchmark do người biết gold viết:** cách diễn đạt có thể vô tình thuận lợi cho truy xuất, và dev là câu Day 6 nên có trần cao. Định nghĩa hit chặt đánh giá thấp bằng chứng tương đương (q03, q09, m02). Nhãn chấm tay có ghi nhận các trường hợp này.
 - **Nhãn:** do LLM chấm nháp (Claude Code, Opus 5.5), đã đọc toàn văn mọi chunk được trích.
   - Học viên đã duyệt 11 mục: 9 câu test (7 câu có đáp án, 2 câu thiếu evidence) và 2 lỗi dev. Học viên đồng ý với giá trị nhãn ở cả **11/11** mục, và làm rõ phạm vi citation của q22 ([results/agent/REVIEW.md](../../results/agent/REVIEW.md)).
-  - **Chấm mù lần hai** (học viên không xem nhãn LLM) cho 15 câu test của cấu hình được chọn: [results/agent/BLIND_REVIEW.md](../../results/agent/BLIND_REVIEW.md). Script `python -m src.blind_review score` tính tỷ lệ đồng thuận và Cohen's kappa, báo riêng phần thật sự mù (10 câu chưa từng xem nhãn). Kết quả ghi vào `results/agent/blind_agreement.json`; file này được tạo sau khi học viên điền phiếu.
+  - **Chấm mù lần hai:** học viên tự đọc trace và chấm 15 câu test của cấu hình được chọn khi chưa xem nhãn LLM ([results/agent/BLIND_REVIEW.md](../../results/agent/BLIND_REVIEW.md), [blind_review.csv](../../results/agent/blind_review.csv)).
+  - **Kết quả** ([results/agent/blind_agreement.json](../../results/agent/blind_agreement.json), tính bằng `python -m src.blind_review score`):
+    - Trên **10 câu thật sự mù**, đồng thuận **10/10** và Cohen's kappa **1.00**. Tính cả 5 câu đã xem nhãn trong REVIEW.md thì đồng thuận 15/15.
+    - Citation: học viên xác nhận 15/15 citation hỗ trợ đúng câu được gắn, khớp với nhãn LLM.
+    - Học viên chấm t09 = 0 với cùng lý do: thiếu bước FLSA nên từ chối một câu có đáp án.
+  - **Cách đọc kết quả:** con số cao một phần vì các câu này dễ phân loại (10/11 câu có đáp án đạt 2, 4/4 câu từ chối rõ ràng). Kappa trên 10 câu, với số mức nhãn ít, nên khoảng tin cậy rộng. Kết quả này cho thấy nhãn LLM **không lệch so với người** trên mẫu này; nó chưa chứng minh nhãn LLM đúng trên các câu khó, chẳng hạn kiểu lỗi q22 ở dev.
   - Mỗi nhãn có lý do cụ thể: hoặc viết tay cho các ngoại lệ, hoặc sinh từ trace (chunk nào chứa câu gold, con số nào khớp, lý do từ chối nguyên văn). Trường `reason_kind` cho biết nhãn thuộc loại nào.
-  - Người duyệt đã xem nhãn và lý do của LLM trước khi duyệt, nên đây không phải chú thích của hai người chấm độc lập và có rủi ro thiên lệch tự động hóa.
+  - **Phạm vi người duyệt:** tổng cộng 21 mục khác nhau được người đọc lại. Gồm 11 mục ở REVIEW.md, nơi người duyệt đã xem nhãn LLM nên có rủi ro thiên lệch tự động hóa, và 10 mục chấm mù. Khoảng 360 nhãn còn lại (dev, các cấu hình khác, test2) chỉ do LLM chấm. Chúng có lý do kiểm chứng được, nhưng chưa được người đọc lại.
 - **Bỏ qua hình:** hình và đồ thị không được trích ở Day 6, nên câu hỏi về hình nằm ngoài phạm vi.
-- **Phân tích hậu kiểm:** chẩn đoán budget được thêm sau khi xem test và chỉ mang tính chẩn đoán. Kết luận về budget cần một test mới.
+- **Phân tích hậu kiểm:** chẩn đoán budget được thêm sau khi xem test. test2 được tạo để kiểm chứng nó, nhưng không tạo ra tình huống gây lỗi, nên **giả thuyết về budget vẫn chưa được xác nhận** trên dữ liệu độc lập.
 
 ## Thử thách nâng cao
 

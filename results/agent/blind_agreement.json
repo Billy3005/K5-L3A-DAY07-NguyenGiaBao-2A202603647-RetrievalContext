@@ -1,0 +1,17 @@
+{
+ "items": 15,
+ "exact_agreement": "15/15",
+ "cohen_kappa": 1.0,
+ "truly_blind_items": 10,
+ "truly_blind_agreement": "10/10",
+ "truly_blind_kappa": 1.0,
+ "seen_before_in_REVIEW": [
+  "t01",
+  "t05",
+  "t10",
+  "t11",
+  "ut1"
+ ],
+ "disagreements": [],
+ "note": "Student graded blind (LLM labels hidden). Kappa over grade levels 0/1/2 and abstention yes/no."
+}

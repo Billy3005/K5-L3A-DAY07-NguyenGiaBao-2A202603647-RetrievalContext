@@ -1,16 +1,16 @@
 query_id,answerable,status,n_citations,student_grade,student_abstention_ok,student_citations_ok,notes
-t01,True,answered,2,,,,
-t02,True,answered,2,,,,
-t03,True,answered,1,,,,
-t04,True,answered,1,,,,
-t05,True,answered,1,,,,
-t06,True,answered,2,,,,
-t07,True,answered,1,,,,
-t08,True,answered,2,,,,
-t09,True,abstain,0,,,,
-t10,True,answered,2,,,,
-t11,True,answered,1,,,,
-ut1,False,abstain,0,,,,
-ut2,False,abstain,0,,,,
-ut3,False,abstain,0,,,,
-ut4,False,abstain,0,,,,
+t01,True,answered,2,2,,2/2,Both cited chunks support the direction and exact equilibrium changes.
+t02,True,answered,2,2,,2/2,The first cited chunk directly supports the education-supply relationship and all three examples; the second supports the qualification explanation.
+t03,True,answered,1,2,,1/1,The cited chunk defines an inferior good and states that demand falls as income rises.
+t04,True,answered,1,2,,1/1,"The cited chunk supports the $12 price floor and attendance falling to 1,400 from 1,800."
+t05,True,answered,1,2,,1/1,The cited table and explanation support the $7 marginal cost and why it exceeds the wage.
+t06,True,answered,2,2,,2/2,The first citation lists all four explanations; the second supports the manufacturing/service shift explanation.
+t07,True,answered,1,2,,1/1,The cited table identifies the Fair Labor Standards Act of 1938 and its minimum-wage and overtime provisions.
+t08,True,answered,2,2,,2/2,Both cited chunks support shortage/excess demand below equilibrium and the adjustment toward equilibrium.
+t09,True,abstain,0,0,,0/0,The retrieved context supports the union-law explanation but not the FLSA requirements; abstaining leaves the answerable multi-hop question incomplete under the stated rubric.
+t10,True,answered,2,2,,2/2,The two citations separately support 57% and the $2.8M/$1.2M lifetime-earnings figures.
+t11,True,answered,1,2,,1/1,"The cited chunk directly supports $700B demand, $510B supply, and the $190B gap."
+ut1,False,abstain,0,,yes,0/0,Correct abstention: the retrieved evidence says laptop demand decreased but gives no percentage.
+ut2,False,abstain,0,,yes,0/0,Correct abstention: no Canada-specific union wage-premium figure is provided.
+ut3,False,abstain,0,,yes,0/0,"Correct abstention: the cited evidence gives UAW membership for other years, not 1960."
+ut4,False,abstain,0,,yes,0/0,Correct abstention: the textbook states a relative unemployment comparison but no numerical rate.
