@@ -1,0 +1,51 @@
+{
+  "cases": 15,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 15,
+    "N": 15
+  },
+  "grounded_answer": {
+    "0": 1,
+    "1": 0,
+    "2": 10,
+    "N": 11,
+    "mean": 1.8181818181818181
+  },
+  "citation_validity": {
+    "n": 15,
+    "N": 15
+  },
+  "answer_citation_coverage": {
+    "n": 10,
+    "N": 10
+  },
+  "abstention": {
+    "n": 4,
+    "N": 4
+  },
+  "false_abstention": {
+    "n": 1,
+    "N": 11
+  },
+  "grounded_by_type": {
+    "conditional": "4/4",
+    "direct": "4/4",
+    "filter": "4/4",
+    "multi_hop": "2/4",
+    "paraphrase": "6/6"
+  },
+  "searches_distribution": {
+    "1": 15
+  },
+  "context_evidence": "10/11",
+  "cost_usd_total": 0.00749,
+  "median_latency_s": 4.05,
+  "tokens": {
+    "input": 50279,
+    "output": 4929
+  },
+  "label_sources": [
+    "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md"
+  ]
+}

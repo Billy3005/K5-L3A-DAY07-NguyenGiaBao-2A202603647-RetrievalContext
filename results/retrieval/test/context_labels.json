@@ -1,0 +1,32 @@
+{
+ "scale": "0 = no evidence; 1 = evidence present but missing a condition, a hop or the source; 2 = full evidence with source (BENCHMARK.md section 2)",
+ "unit": "final context of the retrieval-only pipeline (rank order, 4000-char budget), test answerable questions",
+ "label_source": "LLM-assisted draft (Claude Code, Opus 5.5) from traces results/retrieval/test/*.jsonl; student review in results/agent/REVIEW.md",
+ "dense_B": {
+  "t01": [2, "p78-000 has the full before/after numbers (rank 2)"],
+  "t02": [2, "p102-001 'The more required education, the lower the supply' + examples (rank 1)"],
+  "t03": [2, "p69-000 inferior good definition (rank 2)"],
+  "t04": [2, "p88-003 price floor $12 and 1,400 (rank 1)"],
+  "t05": [2, "p344-000 Table 14.5 row and the reason (rank 3)"],
+  "t06": [2, "p350-000 lists all four explanations (rank 1)"],
+  "t07": [2, "p342-001 FLSA table row (rank 1); chapter-14 filter applied"],
+  "t08": [2, "p66-000 shortage + price rises (rank 1); chapter-3 filter applied"],
+  "t09": [1, "union hop p350-000 present; FLSA hop missing: p342-000 only lists generic protections without naming the act"],
+  "t10": [2, "both hops: p355-004 (57%) and p362-002 ($2.8M / $1.2M)"],
+  "t11": [2, "p108-003 and alternative p107-003"]
+ },
+ "hybrid_rerank_B": {
+  "t01": [2, "p78-000 (rank 2)"],
+  "t02": [1, "only p102-002 (tougher qualifications -> fewer qualified workers); gold p102-001 retrieved at rank 4 but dropped by the 4000-char budget"],
+  "t03": [2, "p69-000 (rank 2)"],
+  "t04": [2, "p88-003 (rank 1)"],
+  "t05": [2, "p344-000 (rank 1)"],
+  "t06": [2, "p350-000 (rank 1)"],
+  "t07": [2, "p342-001 (rank 1)"],
+  "t08": [2, "p66-000 (rank 1)"],
+  "t09": [1, "union hop p350-000 only; FLSA chunk not in context"],
+  "t10": [2, "p355-004 + p362-002"],
+  "t11": [2, "p108-003 + p107-003"]
+ },
+ "summary": {"dense_B": {"0": 0, "1": 1, "2": 10}, "hybrid_rerank_B": {"0": 0, "1": 2, "2": 9}}
+}

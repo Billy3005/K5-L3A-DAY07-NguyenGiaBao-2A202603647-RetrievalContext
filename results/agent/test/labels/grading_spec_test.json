@@ -1,0 +1,24 @@
+{
+ "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+ "default_reason": {
+  "answerable": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to.",
+  "unanswerable": "Called abstain; reason names the missing fact, adds no unsupported claim."
+ },
+ "configs": {
+  "agent_dense_B": {
+   "t05": {"reason": "Grade 2: $7, total cost $9->$16, and the 'raise wage for all previous hires' reason, all in p344-000 (Table 14.5 + text) and p344-001."},
+   "t08": {"reason": "Grade 2: shortage + price rises toward equilibrium (p66-000, gold); extra $1.20 numbers from p65-004 are correct; chapter-3 filter respected."},
+   "t09": {"grade": 0, "reason": "False abstention (grade 0 by rule). Context failure, not retrieval failure: the FLSA chunk p342-001 was retrieved at rank 5 in two different searches but dropped both times by the 4000-char context budget, so the model never saw it; it honestly abstained instead of using outside knowledge. Union half (p350-000) was in context."},
+   "t10": {"reason": "Grade 2: both hops found with two separate searches (p355-004, p362-002)."}
+  },
+  "agent_hrr_B_1shot": {
+   "t09": {"grade": 0, "reason": "False abstention (grade 0). The single combined query ('FLSA ... and decline in union membership') retrieved only union chunks; p342-001 was not in the top-5. Multi-hop weakness of the one-search agent; it honestly abstained."},
+   "t10": {"reason": "Grade 2: one combined query happened to retrieve both hops (p355-004 rank 1, p362-002 rank 2)."}
+  },
+  "agent_hrr_B_1shot_v2": {
+   "t02": {"grade": 1, "reason": "Grade 1 (partial): says tougher qualifications such as academic training reduce qualified workers (true, p102-002) but misses the book's statement 'the more required education, the lower the supply' and its examples (PhD mathematicians, cardiologists, physicians); gives the nursing-subsidy example instead. Gold chunk p102-001 was retrieved at rank 5 but dropped by the 4000-char budget (neighbor chunks used part of the budget). The agent flagged the gap itself. Citation p102-002 supports what is stated."},
+   "t09": {"grade": 0, "reason": "False abstention (grade 0). p342-001 retrieved at rank 5 but dropped by the context budget (together with its neighbor p342-002)."},
+   "t11": {"reason": "Grade 2: $700B vs $510B -> $190B shortage; p108-003 text and p108-000 Table 4.5 both support it."}
+  }
+ }
+}
