@@ -22,7 +22,11 @@
   - Tách bản v2 thành 2 ablation: mỗi thay đổi riêng lẻ đều sửa được q22.
   - Chạy lại cấu hình chọn 3 lần: lỗi ud3 lặp lại ở cả 3/3 lần chạy.
   - Tạo **test2 mới** (10 câu có đáp án, 4 câu thiếu evidence), khóa trước khi chạy. Trên test2, retrieval chọn đạt Hit@1 **9/10** so với dense 5/10; cả 4 agent đạt **2.00/2** và từ chối đúng 4/4.
-- **Chi phí:** 381 lượt chạy agent, khoảng **$0.23** tổng cộng; truy xuất 0 USD (chạy local).
+- **Chi phí:**
+  - **Thực trả (Anthropic Console):** **$0.11** cho toàn bộ Day 7, gồm cả phần nâng cao. Số liệu lọc theo API key `Day7`, model Claude Haiku 5.5, dữ liệu cập nhật đến 14/11/2026 9:42 UTC.
+  - **Ước tính từ trace:** số token ghi trong trace nhân với giá niêm yết ($0.10 / $0.50 cho 1 triệu token vào / ra). Phần cơ bản: 381 lượt chạy agent, khoảng $0.23. Cả Day 7: 663 lượt, 2,68 triệu token vào và 0,34 triệu token ra, khoảng $0.44.
+  - Ước tính cao hơn số thực trả khoảng 4 lần và tôi chưa giải thích được chênh lệch này. Các con số chi phí khác trong báo cáo là ước tính dùng để **so sánh giữa các cấu hình**, không phải hóa đơn.
+  - Truy xuất 0 USD (chạy local).
 - **Thử thách nâng cao:** index toàn bộ cuốn sách 595 trang (text, bảng, hình qua vision), agent có tool xem vùng gốc trên PDF. Kết quả test (30 câu, chạy một lần) **30/30**. Chi tiết ở [mục cuối](#thử-thách-nâng-cao) và [advanced/REPORT.md](../../advanced/REPORT.md).
 
 ## Dữ liệu và benchmark
@@ -258,7 +262,7 @@ Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất,
   - Trên dev, mô tả AI của hình không đủ tin cậy để trả lời con số (d07); đây là lý do thêm `view_region`.
   - 3/30 câu test có thẻ thừa ở cuối câu trả lời (lỗi định dạng).
   - Mỗi cấu hình chỉ chạy một lần, và người dựng hệ thống cũng là người soạn benchmark.
-  - Tổng chi phí phần nâng cao khoảng $0.21.
+  - Chi phí phần nâng cao ước tính theo token khoảng $0.21. Số thực trả theo Anthropic Console là $0.11 cho **cả** Day 7.
 
 ## Sử dụng AI
 

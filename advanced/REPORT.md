@@ -11,7 +11,7 @@
 | **Test (30 câu, chạy 1 lần, cấu hình `adv_hrr_view`)** | **30/30 = 100%** (ngưỡng 27/30) · từ chối đúng 6/6 · lỗi hệ thống 0 |
 | Theo nhóm (test) | bảng 6/6 · sơ đồ 5/5 · biểu đồ 5/5 · multi-hop 4/4 · text 4/4 · thiếu evidence 6/6 |
 | Dev (18 câu), 3 cấu hình agent | `adv_dense` 17/18 · `adv_hrr` 17/18 · `adv_hrr_view` **18/18** |
-| Chi phí toàn bộ phần nâng cao | ≈ **$0.21** (vision $0.101, dev $0.064, test $0.046, chạy thử $0.002) |
+| Chi phí | **Thực trả theo Anthropic Console: $0.11 cho toàn bộ Day 7** (phần cơ bản và nâng cao, API key `Day7`, dữ liệu đến 14/11 9:42 UTC). Ước tính theo token × giá niêm yết cho riêng phần nâng cao: ≈ $0.21 (vision $0.101, dev $0.064, test $0.046, chạy thử $0.002), xem §9 |
 | Thời gian test | trung vị 26,1 s/câu, tối đa 43,3 s (4 luồng song song, rerank trên CPU) |
 | Nhãn test | LLM chấm nháp từ trace và crop trang gốc; học viên đối chiếu cả 30 câu với crop trang gốc, đồng ý 30/30, sửa 0 nhãn (không mù, xem §7) |
 
@@ -146,7 +146,11 @@ Nguồn: [results/agent/test/adv_hrr_view_score.json](results/agent/test/adv_hrr
 
 ## 9. Chi phí
 
-| Hạng mục | Lượt | Chi phí |
+**Số thực trả:** Anthropic Console báo **$0.11** cho toàn bộ Day 7, gồm cả phần cơ bản và phần nâng cao. Số liệu lọc theo API key `Day7`, toàn bộ là Claude Haiku 5.5, dữ liệu cập nhật đến 14/11/2026 9:42 UTC. Kết quả test được commit lúc 16:38 giờ Việt Nam (9:38 UTC), nên mọi lượt gọi API của phần nâng cao đều diễn ra trước mốc này.
+
+Bảng dưới là **ước tính**: số token ghi trong trace nhân với giá niêm yết ($0.10 / $0.50 cho 1 triệu token vào / ra). Ước tính này tái lập được từ trace và dùng để so sánh giữa các cấu hình. Cộng cả Day 7, ước tính là khoảng $0.44, tức cao hơn số thực trả khoảng 4 lần. Tôi chưa xác định được nguyên nhân chênh lệch, nên không dùng ước tính này làm số tiền thực tế.
+
+| Hạng mục | Lượt | Ước tính |
 |---|---|---|
 | Mô tả 198 hình (vision) | 198 | $0.1006 |
 | Agent dev (3 cấu hình × 18 câu) | 54 | $0.0643 |

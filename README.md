@@ -86,7 +86,7 @@ Code chặn chạy `--split test` khi chưa có `results/selection.json`, và ch
 | Retrieval chọn `hybrid_rerank_B` | 16/24 · **22/24** · 22/24 | 8/11 · 10/11 · 9/11 | **9/10** · 10/10 · 10/10 |
 | Agent baseline `agent_dense_B`: grounded TB · từ chối đúng · từ chối nhầm | 2.00/2 · 4/4 · 0/24 | 1.82/2 · 4/4 · 1/11 | 2.00/2 · 4/4 · 0/10 |
 | Agent chọn `agent_hrr_B_1shot` | 2.00/2 · 3/4 · 0/24 (3 lần chạy: 1.92–2.00) | 1.82/2 · 4/4 · 1/11 | 2.00/2 · 4/4 · 0/10 |
-| Chi phí agent (Haiku 5.5) | khoảng $0.0005–0.0007/câu | | tổng cả bài $0.23 (381 lượt chạy) |
+| Chi phí agent (Haiku 5.5) | ước tính khoảng $0.0005–0.0007/câu | | **thực trả theo Anthropic Console: $0.11 cho toàn bộ Day 7, gồm cả phần nâng cao**; ước tính từ token: $0.23 cho phần cơ bản (381 lượt chạy) |
 
 Phân tích, lỗi và giới hạn nằm trong [báo cáo](report/individual/2A202603647_NguyenGiaBao.md). Nhãn do LLM chấm nháp; phiếu duyệt của học viên nằm ở [results/agent/REVIEW.md](results/agent/REVIEW.md).
 
