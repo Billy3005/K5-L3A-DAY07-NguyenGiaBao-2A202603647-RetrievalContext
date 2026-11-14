@@ -15,7 +15,8 @@
 | Thời gian test | trung vị 26,1 s/câu, tối đa 43,3 s (4 luồng song song, rerank trên CPU) |
 | Nhãn test | LLM chấm nháp từ trace và crop trang gốc; học viên đối chiếu cả 30 câu với crop trang gốc, đồng ý 30/30, sửa 0 nhãn (không mù, xem §7) |
 
-Kết quả test và nhãn: [results/agent/test/adv_hrr_view.jsonl](results/agent/test/adv_hrr_view.jsonl) (trace đầy đủ), [results/agent/test/adv_hrr_view_score.json](results/agent/test/adv_hrr_view_score.json) (nhãn cuối cùng và lý do), [results/review/test_adv_hrr_view.md](results/review/test_adv_hrr_view.md) (phiếu duyệt có ảnh gốc), [results/review/test_adv_hrr_view_labels.csv](results/review/test_adv_hrr_view_labels.csv) (nhãn của học viên).
+Kết quả test và nhãn: [results/agent/test/adv_hrr_view.jsonl](results/agent/test/adv_hrr_view.jsonl) (trace đầy đủ). Mỗi câu ghi các lần search (query, `content_type`, top-k với id, loại, trang, score, ms, `context_ids`, số ký tự context), các lần `view_region` (unit, trang, bbox), câu trả lời, citation kèm trang/bbox, token, chi phí, thời gian và lỗi. Văn bản context mà model đọc được tái tạo chính xác từ `context_ids` và file [data/index/units.jsonl](data/index/units.jsonl) đã commit, qua hàm `format_unit` trong [agent.py](agent.py).
+Các file khác: [results/agent/test/adv_hrr_view_score.json](results/agent/test/adv_hrr_view_score.json) (nhãn cuối cùng và lý do), [results/review/test_adv_hrr_view.md](results/review/test_adv_hrr_view.md) (phiếu duyệt có ảnh gốc), [results/review/test_adv_hrr_view_labels.csv](results/review/test_adv_hrr_view_labels.csv) (nhãn của học viên).
 
 ## 1. Tài liệu
 

@@ -69,15 +69,22 @@ def build() -> None:
 
 
 @lru_cache(maxsize=1)
+def _units() -> list[dict]:
+    return [json.loads(l) for l in open(IDX / "units.jsonl", encoding="utf-8")]
+
+
+@lru_cache(maxsize=1)
 def _index():
-    units = [json.loads(l) for l in open(IDX / "units.jsonl", encoding="utf-8")]
-    emb = np.load(IDX / "embeddings.npy")
+    units = _units()
+    emb = np.load(IDX / "embeddings.npy")   # not committed; `python -m advanced.index` rebuilds it
     bm = BM25([{**u, "text": u["index_text"]} for u in units])
     return units, emb, bm
 
 
+@lru_cache(maxsize=1)
 def unit_by_id() -> dict[str, dict]:
-    return {u["id"]: u for u in _index()[0]}
+    """Unit metadata only (committed units.jsonl); does not need the embeddings."""
+    return {u["id"]: u for u in _units()}
 
 
 class Searcher:

@@ -171,7 +171,7 @@ Trên dev, budget 4000 đã bão hòa với rerank nên dev không thể cho th�
 - **Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí:**
   - Trace: `results/agent/{dev,test}/<config>.jsonl`. Mỗi câu có câu hỏi, filter, từng event (`search`: query, top-k, kết quả với id/trang/score, `context_ids`, số ký tự, ms), câu trả lời, citation, `usage` token, chi phí, thời gian, lỗi; gold chỉ được gắn vào sau.
   - Nhãn: `results/agent/*/labels/`. Bảng: `results/agent/*/agent_table.md`. Lệnh chạy: README.
-  - Tổng (gồm cả phần sau test): 381 lượt chạy agent, 1,643,722 token input, 130,082 token output, **$0.23** (giá Haiku 5.5: $0.10 / $0.50 cho mỗi triệu token). Riêng giai đoạn trước test và test: 185 lượt, $0.11. Retrieval chạy local, 0 USD.
+  - Tổng (gồm cả phần sau test): 381 lượt chạy agent, 1,643,722 token input, 130,082 token output, **ước tính $0.23** (token × giá niêm yết Haiku 5.5: $0.10 / $0.50 cho mỗi triệu token). Riêng giai đoạn trước test và test: 185 lượt, ước tính $0.11. Số thực trả theo Anthropic Console là $0.11 cho **toàn bộ** Day 7 (xem Tóm tắt); các ước tính chỉ dùng để so sánh cấu hình. Retrieval chạy local, 0 USD.
 - **Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:**
   - **Chất lượng so với chi phí:** trên test, agent một lượt search (chọn) bằng điểm baseline đa lượt (1.82 so với 1.82) mà **rẻ hơn 30%** ($0.0075 so với $0.0107).
   - **Chất lượng so với thời gian:** rerank chậm hơn khoảng 9 lần trên CPU. Với agent, thời gian bị chi phối bởi lượt gọi model (khoảng 4 giây).
@@ -269,7 +269,7 @@ Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất,
 Dùng Claude Code (Claude Opus 5.5) để đọc đề, viết code, soạn câu hỏi benchmark và chấm nháp nhãn. Agent của bài chạy bằng `claude-haiku-5-5`.
 - **Cách kiểm tra:**
   - Evidence được máy kiểm tra trên trang gốc. Top-3 dense được đối chiếu với trace Day 6 (22/22).
-  - Có 24 unit test, gồm test mock cho vòng lặp agent: citation sai, giới hạn search, lỗi vector store.
+  - Có 29 unit test chạy offline: 15 của starter, 9 của Day 7 và 5 của phần nâng cao. Có test mock cho vòng lặp agent (citation sai, giới hạn search, lỗi vector store) và cho `view_region` (chỉ xem unit đã search, giới hạn số lần xem). Bộ test đã được chạy trên một bản clone mới của repo public.
   - Chẩn đoán budget được kiểm tra lại để khớp chính xác các con số đã ghi.
   - Mọi nhãn kèm lý do và tham chiếu đến chunk cụ thể.
 - **Rà soát độc lập:** một giám khảo AI thứ hai (Claude Sonnet 5.5, không thấy điểm của lượt chấm đầu) đã chấm lại bài theo RUBRIC.
