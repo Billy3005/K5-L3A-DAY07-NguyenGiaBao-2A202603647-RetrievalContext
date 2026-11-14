@@ -1,0 +1,31 @@
+{
+ "rule": "advanced/benchmark/SELECTION_RULE.md (committed 36f5d53 before any dev result)",
+ "dev": {
+  "adv_dense": {
+   "pass": "17/18",
+   "unanswerable": "3/3",
+   "cost_usd": 0.0179,
+   "mean_cost_per_q": 0.00099
+  },
+  "adv_hrr": {
+   "pass": "17/18",
+   "unanswerable": "3/3",
+   "cost_usd": 0.0164,
+   "mean_cost_per_q": 0.00091
+  },
+  "adv_hrr_view": {
+   "pass": "18/18",
+   "unanswerable": "3/3",
+   "cost_usd": 0.03,
+   "mean_cost_per_q": 0.00167
+  }
+ },
+ "selected": "adv_hrr_view",
+ "test_configs": [
+  "adv_hrr_view"
+ ],
+ "why": "Rule 1: highest dev pass rate (18/18 vs 17/18 and 17/18). The only difference is adv-d07, a chart without data labels whose caption disagrees with the plot: the two configs without view_region abstained; adv_hrr_view read the original chart.",
+ "dev_changes_after_seeing_results": [
+  "adv-d08 gold widened (caption vs chart inconsistency in the book); no code or prompt change"
+ ]
+}

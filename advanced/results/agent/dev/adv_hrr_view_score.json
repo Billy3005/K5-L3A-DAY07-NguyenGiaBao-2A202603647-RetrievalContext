@@ -1,0 +1,169 @@
+{
+ "split": "dev",
+ "config": "adv_hrr_view",
+ "pass": 18,
+ "n": 18,
+ "pass_rate": 1.0,
+ "by_group": {
+  "table": "3/3",
+  "diagram": "3/3",
+  "chart": "3/3",
+  "multihop": "3/3",
+  "text": "3/3",
+  "unanswerable": "3/3"
+ },
+ "errors": 0,
+ "student_labels": 0,
+ "student_changed_draft": 0,
+ "mean_s": 25.0,
+ "p_max_s": 44.25,
+ "cost_usd": 0.03,
+ "mean_searches": 1.44,
+ "mean_views": 0.78,
+ "labels": {
+  "adv-d01": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "16.5 million (S1, point L) and 19.8 million (S2, point M) at $20,000; viewed and cited Figure 3.10 p.72, whose image shows these labelled points (Table 3.5 not cited but the figure is equivalent evidence on the same page).",
+   "student_note": ""
+  },
+  "adv-d02": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "India 8.1% (2011); viewed and cited Table 15.7 p.384.",
+   "student_note": ""
+  },
+  "adv-d03": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "0.30% (17,236 firms) and 49.8% (50.9 of 112.0 million); viewed Table 7.1 p.169.",
+   "student_note": ""
+  },
+  "adv-d04": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "15,000 / 19,000 / shortage 4,000; viewed Figure 3.21 p.84.",
+   "student_note": ""
+  },
+  "adv-d05": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Arrow labels read from the viewed Figure 17.3 p.424.",
+   "student_note": ""
+  },
+  "adv-d06": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "E (1,200, $10); at $12: 1,600 supplied, 700 demanded, surplus 900; viewed Figure 4.4 p.104.",
+   "student_note": ""
+  },
+  "adv-d07": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Viewed Figure 17.7: ~ $460,000 in 2021 and 2007 peak ~ $310,000-315,000 (within tolerance); also flags that the caption's $248,000 (median) disagrees with the plotted line.",
+   "student_note": ""
+  },
+  "adv-d08": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "EITC ~ $61 billion highest; CTC ~ $51 billion and TANF ~ $18 billion read from the viewed chart; notes the caption's 'over $25 billion' for CTC.",
+   "student_note": ""
+  },
+  "adv-d09": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Right axis = Dow Jones 0-36,000, left = S&P 500 0-3,800; low around 2009; viewed Figure 17.6 p.429.",
+   "student_note": ""
+  },
+  "adv-d10": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "17 million (text p0067-t1, point R at $22,000) and 20 million (text p0072-t1, point K at $22,000), surplus 3 million; the cited paragraphs state both values (tables not cited but the cited text is sufficient evidence).",
+   "student_note": ""
+  },
+  "adv-d11": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "43.6% -> 52.2% (+8.6) from Table 15.5 pp.381-382; Brazil 57.8% from Table 15.7 p.384; tables viewed.",
+   "student_note": ""
+  },
+  "adv-d12": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "700 / 550 / 150 million gallons; viewed Table 3.1 p.61 and Table 3.2 p.63.",
+   "student_note": ""
+  },
+  "adv-d13": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Both weaknesses from p.276. Answer string ends with leaked '</answer><citations>' markup (formatting glitch, no extra claim).",
+   "student_note": ""
+  },
+  "adv-d14": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "High-wage vs low-wage technology choice from p.186.",
+   "student_note": ""
+  },
+  "adv-d15": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "24.6 M -> 23.79 M after 810,000 cancellations; 600,000 expected (p0140-t1).",
+   "student_note": ""
+  },
+  "adv-d16": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; no 2023 claim.",
+   "student_note": ""
+  },
+  "adv-d17": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained after viewing Table 15.7; Japan not listed.",
+   "student_note": ""
+  },
+  "adv-d18": {
+   "label": "pass",
+   "labeled_by": "llm_draft",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; 2010 value given only as context.",
+   "student_note": ""
+  }
+ }
+}

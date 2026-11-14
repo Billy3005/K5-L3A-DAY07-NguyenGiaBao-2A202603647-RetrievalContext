@@ -179,11 +179,11 @@
    "group": "chart",
    "answerable": true,
    "question": "In the chart of real federal spending on CTC, EITC and TANF, which program had the highest spending at the end of the period (2016), and roughly how much did each of the three programs spend then?",
-   "expected": "EITC highest at about $61-62 billion (2011 dollars); CTC about $51 billion; TANF about $18 billion.",
+   "expected": "EITC highest at about $61-62 billion (caption: 'over $61 billion'). CTC: the plotted line is about $51 billion but the printed caption says 'over $25 billion' (the book is inconsistent); TANF about $18 billion. Either CTC value is accepted if attributed to its source.",
    "must_include": [
     "EITC"
    ],
-   "tolerance": "EITC 58-64, CTC 48-54, TANF 16-21 (billions of 2011 dollars)",
+   "tolerance": "EITC 58-64; CTC either ~48-54 (chart) or 'over $25 billion' (caption); TANF 16-21 (billions of 2011 dollars)",
    "evidence_groups": [
     [
      {
@@ -193,7 +193,8 @@
      }
     ]
    ],
-   "reason": "Three-series line chart without data labels."
+   "reason": "Three-series line chart without data labels.",
+   "change_log": "2026-11-14, after the dev run: gold widened because the caption and the plotted CTC line disagree (found while grading adv_dense). Dev only; test gold unchanged."
   },
   {
    "id": "adv-d09",

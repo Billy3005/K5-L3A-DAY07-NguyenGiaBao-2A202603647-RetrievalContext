@@ -1,0 +1,77 @@
+{
+ "label_source": "LLM draft by Claude Code (Opus 5.5), 2026-11-14: read every trace and checked numbers against the original page crops; dev labels are not student-reviewed.",
+ "labels": {
+  "adv-d01": {
+   "label": "pass",
+   "reason": "16.5 million (S1) and 19.8 million (S2) at $20,000; cited p0073-t0 text states both (points L and M) and Figure 3.10 p.72."
+  },
+  "adv-d02": {
+   "label": "pass",
+   "reason": "India 8.1% (2011) matches Table 15.7 p.384; cited unit is the table."
+  },
+  "adv-d03": {
+   "label": "pass",
+   "reason": "0.30% (17,236 firms) and 49.8% (50.9 million) match Table 7.1 row '500 or more', p.169."
+  },
+  "adv-d04": {
+   "label": "pass",
+   "reason": "15,000 supplied, 19,000 demanded, shortage 4,000 match the dashed lines in Figure 3.21 p.84 (also Table 3.7 row $500)."
+  },
+  "adv-d05": {
+   "label": "pass",
+   "reason": "Repayment of loans + interest payments (borrowers to banks) and withdrawals + interest payments (banks to savers) match the arrow labels of Figure 17.3 p.424."
+  },
+  "adv-d06": {
+   "label": "pass",
+   "reason": "E = (1,200, $10); at $12 demanded 700, supplied 1,600, surplus 900 match Figure 4.4 p.104. Note: the answer string ends with leaked '</answer><citations>' markup (formatting glitch, no extra claim)."
+  },
+  "adv-d07": {
+   "label": "fail",
+   "reason": "Abstained: the agent distrusted the AI description (2021 ~ $460,000) because the caption reports median prices for 1990-2015 ($248,000 in 2007); the chart itself shows ~ $460,000 in 2021 and a 2007 peak ~ $313,000. Answerable question -> abstain = fail."
+  },
+  "adv-d08": {
+   "label": "pass",
+   "reason": "EITC over $61 billion is highest; CTC 'over $25 billion' and TANF $18 billion are taken from the printed caption of Figure 15.5 and attributed to it (accepted by the widened dev gold, see change_log)."
+  },
+  "adv-d09": {
+   "label": "pass",
+   "reason": "Right axis = Dow Jones up to 36,000; low around 2009, rising to 2021 (Figure 17.6 p.429). It says the axis starts at 2,000 (first non-zero tick; the axis starts at 0) - minor, not a wrong claim about the asked range's top."
+  },
+  "adv-d10": {
+   "label": "pass",
+   "reason": "17.0 million (Table 3.4 p.68) and 20.0 million (Table 3.5 p.72), surplus 3.0 million; both tables cited."
+  },
+  "adv-d11": {
+   "label": "pass",
+   "reason": "43.6% (1967, Table 15.5 p.381) -> 52.2% (2020, p.382), +8.6; Brazil 57.8% (Table 15.7 p.384); all three units cited. Answer string has leaked closing markup (formatting glitch)."
+  },
+  "adv-d12": {
+   "label": "pass",
+   "reason": "700 and 550 million gallons, gap 150: Table 3.1 p.61 and Table 3.3 (p.64 part has the $1.20 row) and Figure 3.4 dashed lines."
+  },
+  "adv-d13": {
+   "label": "pass",
+   "reason": "Both weaknesses (well-defined market; similar competitive conditions across industries) match p.276 paragraph."
+  },
+  "adv-d14": {
+   "label": "pass",
+   "reason": "High-wage: conserve workers / more machines; low-wage: more workers / less machinery - p.186."
+  },
+  "adv-d15": {
+   "label": "pass",
+   "reason": "24.6 M -> 23.79 M after 810,000 cancellations (p.140); extra claim 'expected about 600,000 to leave' is supported by p0140-t1."
+  },
+  "adv-d16": {
+   "label": "pass",
+   "reason": "Abstained; no 2023 figure claimed."
+  },
+  "adv-d17": {
+   "label": "pass",
+   "reason": "Abstained; correctly notes Japan is not in Table 15.7."
+  },
+  "adv-d18": {
+   "label": "pass",
+   "reason": "Abstained; mentions the 2010 value as context only, makes no 2020 claim."
+  }
+ }
+}
