@@ -1,0 +1,156 @@
+[
+ {
+  "query_id": "a01",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$2.42', '$3.16', '2020', '2021']. -p0060-pb1000-001 has gold sentence \"Why was the average price of gasoline in the United States $3.16 per gallon in June of 202...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a02",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$20,000', '16.5 million', '18 million']. -p0073-pb1000-000 has gold sentence \"at a price of $20,000, the quantity supplied decreases from 18 million on the original sup...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a03",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0073-pb1000-003 has gold sentence \"the harvest was twice as high per acre...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a04",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0081-pb1000-001 has gold sentence \"Since the two effects are in opposite directions, unless we know the magnitudes of the two...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a05",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$4', '$8']. -p0337-pb1000-001 has gold sentence \"VMPL $16 $12 $8 $4...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a06",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0109-pb1000-000 has gold sentence \"Social Security has shifted the supply of financial capital at any interest rate to the le...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a07",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1947']. -p0352-pb1000-000 has gold sentence \"Taft-Hartley Act of 1947, which gave states the power to allow workers to opt out of the u...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a08",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0101-pb1000-002 has gold sentence \"word processing decreased the number of typists needed in the workplace. This shifted the ...\". all 4 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a09",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['43%', '81%']. -p0098-pb1000-002 has gold sentence \"in 2018 43% of full- time college students and 81% of part-time college students were empl...\"; -p0109-pb1000-001 has gold sentence \"they borrow today and demand from financial markets...\". all 3 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "a10",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1990', '2012', '2060', '69%', '70', '78%', '80%']. -p0354-pb1000-000 has gold sentence \"The 1990s saw a peak above 80% followed by a bumpy decline to the low 70s....\"; -p0359-pb1000-002 has gold sentence \"Whites will comprise 69% of the U.S. population by 2060...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "b01",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages give the average U.S. gasoline price as $3.16 per gallon in June 2020, not June 2022. No passage states a June 2022 average price, so I cannot answer the question as asked.\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "b02",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages state only that the U.S. tax on alcoholic beverages collects about $8 billion per year from producers [micro3e-p0073-pb1000-004]. They do not give the tax rate (percentage or per-unit amount), so t\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "b03",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages give union membership figures only for U.S. workers (about 10.3% in 2021) and for a 2012 international table (Table 14.8) that does not include Canada. No passage states the percentage of Canadian \"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "b04",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages give total student loan debt ($1.3 trillion), average annual loan amounts for full-time undergraduates ($7,300 per year), and the cost of college, but none state the average student loan balance of\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ }
+]

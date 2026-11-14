@@ -1,0 +1,19 @@
+{
+  "n": 14,
+  "errors": 0,
+  "tool_use": "14/14",
+  "searches_distribution": {
+    "1": 14
+  },
+  "model_calls_mean": 2,
+  "context_evidence": "10/10",
+  "answered_on_answerable": "10/10",
+  "abstained_on_unanswerable": "4/4",
+  "validation_errors": 0,
+  "avg_context_chars": 3510,
+  "input_tokens": 47418,
+  "output_tokens": 4525,
+  "cost_usd_total": 0.007,
+  "cost_usd_per_q": 0.0005,
+  "median_latency_s": 3.87
+}

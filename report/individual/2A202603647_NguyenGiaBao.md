@@ -18,7 +18,11 @@
   - Ở `agent_dense_B` và `agent_hrr_B_1shot_v2`, retriever **có tìm thấy** chunk FLSA (hạng 5) nhưng **budget context 4000 ký tự loại nó đi** trước khi model đọc. Đây là lỗi ở bước chọn context.
   - Ở **cấu hình được chọn** `agent_hrr_B_1shot`, một query gộp cả hai ý nên chunk FLSA **không vào top-5**. Đây là lỗi retrieval multi-hop của agent chỉ search một lượt.
   - Chẩn đoán hậu kiểm: với budget 8000 ký tự, Context Evidence của `hybrid_rerank_B` trên test tăng từ 9/11 lên 11/11. Cách sửa này được kiểm chứng trên **test2** mới (xem phần dưới).
-- **Chi phí:** 185 lượt chạy agent, khoảng **$0.11** tổng cộng; truy xuất 0 USD (chạy local).
+- **Sau test** (mục riêng ở dưới):
+  - Tách bản v2 thành 2 ablation: mỗi thay đổi riêng lẻ đều sửa được q22.
+  - Chạy lại cấu hình chọn 3 lần: lỗi ud3 lặp lại ở cả 3/3 lần chạy.
+  - Tạo **test2 mới** (10 câu có đáp án, 4 câu thiếu evidence), khóa trước khi chạy. Trên test2, retrieval chọn đạt Hit@1 **9/10** so với dense 5/10; cả 4 agent đạt **2.00/2** và từ chối đúng 4/4.
+- **Chi phí:** 381 lượt chạy agent, khoảng **$0.23** tổng cộng; truy xuất 0 USD (chạy local).
 
 ## Dữ liệu và benchmark
 
@@ -113,7 +117,7 @@ Trên dev, budget 4000 đã bão hòa với rerank nên dev không thể cho th�
     - Sai lần đầu thì trả lỗi để model sửa (q03 dev: model viết `[id1, id2]` và đã tự sửa). Sai lần hai thì chuyển thành từ chối.
   - **Context cuối:** hợp của mọi chunk đã đưa cho model.
   - **Bản v2 có thêm:** nếu chunk kết thúc giữa câu, chèn chunk kế tiếp ngay sau nó; và hai luật trong prompt (xem phần dưới).
-  - **Xử lý lỗi:** lỗi từ API hoặc vector store được ghi `status: "error"`, không thay bằng kết quả giả (có test mock). Kết quả: 0 lỗi trong 185 lượt chạy có lưu trace.
+  - **Xử lý lỗi:** lỗi từ API hoặc vector store được ghi `status: "error"`, không thay bằng kết quả giả (có test mock). Kết quả: 0 lỗi trong 381 lượt chạy có lưu trace (dev, test, test2).
   - **An toàn:** system prompt ghi rõ nội dung passage là dữ liệu, không phải chỉ dẫn. Gold chỉ được gắn vào trace *sau khi* chạy xong.
 
 **Các cấu hình agent trên dev** (cùng 28 câu; [results/agent/dev/agent_table.md](../../results/agent/dev/agent_table.md)):
@@ -162,7 +166,7 @@ Trên dev, budget 4000 đã bão hòa với rerank nên dev không thể cho th�
 - **Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí:**
   - Trace: `results/agent/{dev,test}/<config>.jsonl`. Mỗi câu có câu hỏi, filter, từng event (`search`: query, top-k, kết quả với id/trang/score, `context_ids`, số ký tự, ms), câu trả lời, citation, `usage` token, chi phí, thời gian, lỗi; gold chỉ được gắn vào sau.
   - Nhãn: `results/agent/*/labels/`. Bảng: `results/agent/*/agent_table.md`. Lệnh chạy: README.
-  - Tổng: 185 lượt chạy agent, 778,726 token input, 63,188 token output, **$0.11** (giá Haiku 5.5: $0.10 / $0.50 cho mỗi triệu token). Retrieval chạy local, 0 USD.
+  - Tổng (gồm cả phần sau test): 381 lượt chạy agent, 1,643,722 token input, 130,082 token output, **$0.23** (giá Haiku 5.5: $0.10 / $0.50 cho mỗi triệu token). Riêng giai đoạn trước test và test: 185 lượt, $0.11. Retrieval chạy local, 0 USD.
 - **Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:**
   - **Chất lượng so với chi phí:** trên test, agent một lượt search (chọn) bằng điểm baseline đa lượt (1.82 so với 1.82) mà **rẻ hơn 30%** ($0.0075 so với $0.0107).
   - **Chất lượng so với thời gian:** rerank chậm hơn khoảng 9 lần trên CPU. Với agent, thời gian bị chi phối bởi lượt gọi model (khoảng 4 giây).
@@ -170,13 +174,67 @@ Trên dev, budget 4000 đã bão hòa với rerank nên dev không thể cho th�
   - **Cấu hình v2** sửa được hai lỗi dev nhưng trên test thấp hơn một chút (1.73 so với 1.82). Chunk lân cận chiếm budget và đẩy rank-5 ra ngoài (t02). Một cải tiến có thể gây tác dụng phụ ở chỗ khác.
   - **Hướng sửa có bằng chứng** (chưa kiểm chứng độc lập): budget theo số chunk thay vì số ký tự, hoặc budget 6000–8000 ký tự, cộng chunk lân cận *trong* budget riêng. Cần một test mới để xác nhận.
 
+## Sau test: ablation, dao động và test2
+
+Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất, nên không được dùng như bằng chứng test độc lập. Các thay đổi chỉ được đo trên dev và trên **test2**, một holdout mới được khóa trước khi chạy:
+- Câu hỏi test2 được khóa ở commit `5c0102d`, cùng bản khai báo cấu hình và giả thuyết [results/test2_preregistration.json](../../results/test2_preregistration.json).
+- Câu hỏi chỉ lấy từ các trang chưa từng là trang evidence; script kiểm tra test2 không chung câu evidence nào với dev hay test ([benchmark/test2/README.md](../../benchmark/test2/README.md)).
+
+**1. Tách hai thay đổi của v2 trên dev** (mỗi cấu hình chỉ đổi một yếu tố so với `agent_hrr_B`; [results/agent/dev/agent_table.md](../../results/agent/dev/agent_table.md)):
+
+| Cấu hình (dev) | Thay đổi | q22 (chunk bị cắt) | ud3 (giao thức từ chối) | Grounded TB | Từ chối đúng | Chi phí |
+|---|---|---|---|---|---|---|
+| `agent_hrr_B` | không | 1 (viết tiếp câu bị cắt) | từ chối đúng | 1.96 | 4/4 | $0.0181 |
+| `agent_hrr_B_nbr` | chỉ chunk lân cận | **2** (p358-000 nối đủ câu) | từ chối đúng | 2.00 | 4/4 | $0.0178 |
+| `agent_hrr_B_rule` | chỉ luật prompt | **2** (không viết tiếp, dùng ví dụ đầy đủ trong p357-005) | từ chối đúng | 1.96 (q13 = 1, xem dưới) | 4/4 | $0.0176 |
+| `agent_hrr_B_v2` | cả hai | 2 | từ chối đúng | 2.00 | 4/4 | $0.0187 |
+
+- Kết luận: **mỗi thay đổi riêng lẻ đều sửa được q22**. Lỗi ud3 không xuất hiện ở các agent tìm nhiều lượt, kể cả khi dùng prompt v1. Như vậy luật prompt chỉ thật sự cần cho agent một lượt (xem mục 2).
+- Câu q13 ở `_rule` bị chấm 1: câu trả lời gọi MPL×P là "marginal revenue product", sai thuật ngữ so với sách. Đây là lỗi riêng lẻ, không do luật prompt gây ra.
+
+**2. Dao động giữa các lần chạy** (Haiku 5.5 không cho đặt temperature; chạy lại `agent_hrr_B_1shot` trên dev 3 lần):
+
+| Lần | Grounded TB | Từ chối đúng | Từ chối nhầm | Chi phí |
+|---|---|---|---|---|
+| 1 | 2.00 | 3/4 (ud3) | 0/24 | $0.0140 |
+| 2 | 2.00 | 3/4 (ud3) | 0/24 | $0.0142 |
+| 3 | 1.92 | 3/4 (ud3) | **1/24** (m02) | $0.0142 |
+
+- **ud3 hỏng ở 3/3 lần chạy:** lỗi giao thức này có hệ thống, không phải ngẫu nhiên. Khi hết lượt search, agent một lượt chọn `submit_answer` để nói "sách không ghi". `agent_hrr_B_1shot_v2` (có luật prompt) sửa được lỗi này (4/4).
+- **m02 ở lần 3:** query gộp hai ý bỏ sót chunk chứa con số 20%. Lỗi multi-hop này **giống hệt t09 trên test**, nên điểm yếu của agent một lượt được xác nhận lặp lại.
+- Mức dao động của điểm trung bình khoảng 0.08/2, tương đương 1 câu.
+
+**3. test2: chạy một lần cho 4 cấu hình đã khai báo trước**
+
+| test2 | Hit@1 | Evidence Hit@3 | Context Evidence (4000 ký tự) | MRR@10 | Thời gian trung vị |
+|---|---|---|---|---|---|
+| `dense_B` | 5/10 | 9/10 | 10/10 | 0.725 | 80 ms |
+| `hybrid_rerank_B` | **9/10** | **10/10** | 10/10 | **0.950** | 1019 ms |
+
+| Agent / test2 | Số lượt search | Grounded 0/1/2 → TB | Citation hợp lệ | Từ chối đúng | Từ chối nhầm | Context Evidence | Chi phí |
+|---|---|---|---|---|---|---|---|
+| `agent_dense_B` (baseline) | 1:2 · 2:12 | 0/0/10 → 2.00 | 19/19 | 4/4 | 0/10 | 9/10 | $0.0099 |
+| `agent_hrr_B_1shot` (chọn) | 1:14 | 0/0/10 → 2.00 | 17/17 | 4/4 | 0/10 | 10/10 | **$0.0070** |
+| `agent_hrr_B` | 1:5 · 2:8 · 3:1 | 0/0/10 → 2.00 | 14/14 | 4/4 | 0/10 | 10/10 | $0.0095 |
+| `agent_hrr_B_ctx8k` | 1:2 · 2:12 | 0/0/10 → 2.00 | 18/18 | 4/4 | 0/10 | 10/10 | $0.0107 |
+
+**Kết luận các giả thuyết đã khai báo trước:**
+- **H1 (budget): không kết luận được.** Trên test2, evidence của mọi câu đều đã vừa budget 4000 ký tự (chẩn đoán offline: 10/10 ở mọi mức từ 4000 trở lên). Test2 không tạo ra tình huống mà budget 8000 có thể giúp. Bằng chứng duy nhất cho việc budget gây lỗi vẫn là t09 và t02 trên test.
+- **H2 (đa lượt so với một lượt ở multi-hop): không kết luận được.** Ở a09 và a10, một query gộp tình cờ lấy được cả hai bước. Trên dev (m02 lần 3) và test (t09), cùng kiểu câu đó lại thất bại. Kết luận thận trọng: trong 10 lần agent một lượt gặp câu multi-hop (m01×3, m02×3, t09, t10, a09, a10), nó trượt **2 lần** do query gộp bỏ sót một bước. Agent đa lượt có trượt 1 lần (t09 ở `agent_dense_B`), nhưng nguyên nhân là budget, không phải retrieval.
+- **H3 (cấu hình chọn so với baseline): hòa** (2.00 và 2.00), giống kết quả test (1.82 và 1.82). Cấu hình chọn rẻ hơn **29%** ($0.0070 so với $0.0099).
+- **Retrieval:** test2 xác nhận kết luận của dev (rerank tốt hơn rõ ở Hit@1 và MRR), không xác nhận sự đảo chiều của test. Sự đảo chiều trên test (11/11 so với 10/11, chỉ 1 câu) phù hợp với nhiễu do mẫu nhỏ.
+
+**Khuyến nghị nếu triển khai** (rút ra sau tất cả bằng chứng; không thay thế lựa chọn đã khóa): dùng `hybrid_rerank_B`, agent đa lượt, bật luật prompt v2 và chunk lân cận, budget theo số chunk thay vì số ký tự. Chi phí tăng khoảng 30–50% so với agent một lượt, nhưng tránh được cả ba kiểu lỗi đã quan sát: multi-hop một lượt, giao thức từ chối, và viết tiếp câu bị cắt.
+
 ## Giới hạn
 
 - **Mẫu nhỏ:** test có 11 câu có đáp án (1 câu tương đương 9 điểm %) và 4 câu thiếu evidence; dev có 24 câu. Không chênh lệch nào ở đây có ý nghĩa thống kê.
-- **Không tất định:** Haiku 5.5 không cho đặt temperature, và mỗi cấu hình chỉ chạy một lần. Query do model tự viết thay đổi giữa các lần chạy (t02 cho hai query khác nhau ở 1shot và 1shot_v2). Mức dao động chưa được đo.
+- **Không tất định:** Haiku 5.5 không cho đặt temperature. Mức dao động mới được đo cho cấu hình chọn trên dev (3 lần: điểm trung bình dao động trong khoảng 1.92–2.00; ud3 hỏng ở 3/3 lần). Các cấu hình khác chỉ chạy 1 lần. Query do model tự viết thay đổi giữa các lần chạy.
 - **Benchmark do người biết gold viết:** cách diễn đạt có thể vô tình thuận lợi cho truy xuất, và dev là câu Day 6 nên có trần cao. Định nghĩa hit chặt đánh giá thấp bằng chứng tương đương (q03, q09, m02). Nhãn chấm tay có ghi nhận các trường hợp này.
 - **Nhãn:** do LLM chấm nháp (Claude Code, Opus 5.5), đã đọc toàn văn mọi chunk được trích.
   - Học viên đã duyệt 11 mục: 9 câu test (7 câu có đáp án, 2 câu thiếu evidence) và 2 lỗi dev. Học viên đồng ý với giá trị nhãn ở cả **11/11** mục, và làm rõ phạm vi citation của q22 ([results/agent/REVIEW.md](../../results/agent/REVIEW.md)).
+  - **Chấm mù lần hai** (học viên không xem nhãn LLM) cho 15 câu test của cấu hình được chọn: [results/agent/BLIND_REVIEW.md](../../results/agent/BLIND_REVIEW.md). Script `python -m src.blind_review score` tính tỷ lệ đồng thuận và Cohen's kappa, báo riêng phần thật sự mù (10 câu chưa từng xem nhãn). Kết quả ghi vào `results/agent/blind_agreement.json`; file này được tạo sau khi học viên điền phiếu.
+  - Mỗi nhãn có lý do cụ thể: hoặc viết tay cho các ngoại lệ, hoặc sinh từ trace (chunk nào chứa câu gold, con số nào khớp, lý do từ chối nguyên văn). Trường `reason_kind` cho biết nhãn thuộc loại nào.
   - Người duyệt đã xem nhãn và lý do của LLM trước khi duyệt, nên đây không phải chú thích của hai người chấm độc lập và có rủi ro thiên lệch tự động hóa.
 - **Bỏ qua hình:** hình và đồ thị không được trích ở Day 6, nên câu hỏi về hình nằm ngoài phạm vi.
 - **Phân tích hậu kiểm:** chẩn đoán budget được thêm sau khi xem test và chỉ mang tính chẩn đoán. Kết luận về budget cần một test mới.
@@ -193,6 +251,9 @@ Dùng Claude Code (Claude Opus 5.5) để đọc đề, viết code, soạn câu
   - Có 24 unit test, gồm test mock cho vòng lặp agent: citation sai, giới hạn search, lỗi vector store.
   - Chẩn đoán budget được kiểm tra lại để khớp chính xác các con số đã ghi.
   - Mọi nhãn kèm lý do và tham chiếu đến chunk cụ thể.
+- **Rà soát độc lập:** một giám khảo AI thứ hai (Claude Sonnet 5.5, không thấy điểm của lượt chấm đầu) đã chấm lại bài theo RUBRIC.
+  - Kết quả kiểm tra: 13 con số và 8 nhãn khớp hoàn toàn.
+  - Lỗi phát hiện: báo cáo khái quát quá mức nguyên nhân t09 và nói quá về những gì đã được khóa trong `a6ab742`. Cả hai đã được sửa trong báo cáo này.
 - **Các chỗ AI đã sai và được sửa trong quá trình làm:**
   - Lần đầu ghi nhãn citation q22 sai vị trí (danh sách citation đã bỏ trùng).
   - Một test dùng dữ liệu thiếu dấu nháy.

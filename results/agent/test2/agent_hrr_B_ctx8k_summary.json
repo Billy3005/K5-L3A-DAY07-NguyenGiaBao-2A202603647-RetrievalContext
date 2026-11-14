@@ -1,0 +1,52 @@
+{
+  "cases": 14,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 14,
+    "N": 14
+  },
+  "grounded_answer": {
+    "0": 0,
+    "1": 0,
+    "2": 10,
+    "N": 10,
+    "mean": 2.0
+  },
+  "citation_validity": {
+    "n": 18,
+    "N": 18
+  },
+  "answer_citation_coverage": {
+    "n": 10,
+    "N": 10
+  },
+  "abstention": {
+    "n": 4,
+    "N": 4
+  },
+  "false_abstention": {
+    "n": 0,
+    "N": 10
+  },
+  "grounded_by_type": {
+    "conditional": "4/4",
+    "direct": "6/6",
+    "filter": "4/4",
+    "multi_hop": "4/4",
+    "paraphrase": "2/2"
+  },
+  "searches_distribution": {
+    "1": 2,
+    "2": 12
+  },
+  "context_evidence": "10/10",
+  "cost_usd_total": 0.01074,
+  "median_latency_s": 4.8,
+  "tokens": {
+    "input": 82700,
+    "output": 4950
+  },
+  "label_sources": [
+    "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet"
+  ]
+}

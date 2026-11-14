@@ -1,0 +1,17 @@
+{
+ "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read all 56 test2 traces (answer, full text of every cited chunk) against gold on 2026-11-14; no student review yet",
+ "configs": {
+  "agent_dense_B": {
+   "a04": {"reason": "Grade 2 although strict context_evidence=False: gold sentence p81-001 was not retrieved, but p81-000 (quantity falls) and p112-005 ('overall impact will depend on the degree of the shifts') support 'quantity falls, price effect depends on relative size'; all 4 citations read and support their sentences."},
+   "a08": {"reason": "Grade 2: word-processing/typists example from p101-002 (gold) with the substitute definition in p101-001; extra low-skill file-clerk remark supported by p103-001; chapter-4 filter kept the Ch14 typist-productivity distractor out."}
+  },
+  "agent_hrr_B_1shot": {
+   "a09": {"reason": "Grade 2: ONE combined query retrieved both hops (p98-002: 43%; p109-001: 'they borrow today and demand from financial markets')."},
+   "a10": {"reason": "Grade 2: one combined query retrieved both hops (p354-000 peak above 80%; p359-002 69% by 2060)."}
+  },
+  "agent_hrr_B": {
+   "a09": {"reason": "Grade 2: 43% (p98-002) and borrowers on the demand side (p106-005, equivalent to gold p109-001/p98-001)."}
+  },
+  "agent_hrr_B_ctx8k": {}
+ }
+}
