@@ -17,6 +17,10 @@ QUESTIONS = BENCHMARK_DIR / "questions.json"
 DATA_DIR = ROOT / "data" / "day6_export"
 RESULTS = ROOT / "results"
 SELECTION = RESULTS / "selection.json"
+# Second holdout, created after the first test split was consumed (see benchmark/test2/README.md).
+TEST2_DIR = BENCHMARK_DIR / "test2"
+TEST2_QUESTIONS = TEST2_DIR / "questions.json"
+TEST2_PREREG = RESULTS / "test2_preregistration.json"
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab")
 
@@ -74,4 +78,16 @@ AGENT_CONFIGS = {
     "agent_hrr_B_1shot_v2": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 1,
                        "effort": "medium", "prompt": "v2", "neighbors": True,
                        "hypothesis": "Same changes on the cheaper one-search agent."},
+    # ---- Added AFTER the single test run (test is consumed). Evaluated on dev and on the new,
+    # separately locked test2 split only (benchmark/test2/README.md). One change each vs agent_hrr_B.
+    "agent_hrr_B_nbr": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 4,
+                        "effort": "medium", "neighbors": True,
+                        "hypothesis": "Ablation of v2: neighbor chunk only (no prompt rules)."},
+    "agent_hrr_B_rule": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 4,
+                         "effort": "medium", "prompt": "v2",
+                         "hypothesis": "Ablation of v2: prompt rules only (no neighbor chunk)."},
+    "agent_hrr_B_ctx8k": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 8000, "max_searches": 4,
+                          "effort": "medium",
+                          "hypothesis": "Test finding t09/t02: rank-5 evidence dropped by the 4000-char budget. "
+                                        "8000 chars fits all top-5 B chunks (max ~1000 chars + header)."},
 }

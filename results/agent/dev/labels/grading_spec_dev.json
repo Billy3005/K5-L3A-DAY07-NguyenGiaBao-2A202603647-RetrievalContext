@@ -31,6 +31,25 @@
    "q22": {"reason": "Grade 2 (fixed): neighbor p358-000 completes the cut-off Becker sentence."},
    "q09": {"reason": "Grade 2: generic binding-floor -> excess supply answer supported by p105-003; agent states it relies on the minimum-wage example."},
    "ud3": {"reason": "Abstained (fixed: v1 one-search agent submitted a 'not stated' answer instead)."}
+  },
+  "agent_hrr_B_nbr": {
+   "q01": {"unsupported_citation_idx": [1], "reason": "Grade 2: $1.40 / 600 from p64-002 (gold). Citation p64-001 only says Figure 3.4 shows the interaction; it states no number, so it does not support the cited sentence."},
+   "q22": {"reason": "Grade 2 (fixed by the neighbor chunk alone): p358-000 completes the cut-off Becker sentence ('other profit-seeking employers can hire these workers')."}
+  },
+  "agent_hrr_B_rule": {
+   "q13": {"grade": 1, "unsupported_citation_idx": [0], "reason": "Grade 1 (strict): core answer correct (higher product price raises labor demand, p339-000) but it labels MPL x P 'the marginal revenue product'; the book calls MPL x P the value of the marginal product and reserves MRP (MPL x MR) for firms with market power (p339-001). The cited chunk does not support that label."},
+   "q22": {"reason": "Grade 2 (fixed by the prompt rule alone): no neighbor chunk, but the agent did not complete the cut-off sentence and used the complete 'refuses to sell to minorities... cuts into its own profits' example in p357-005."}
+  },
+  "agent_hrr_B_ctx8k": {
+   "q22": {"reason": "Grade 2: uses the complete 'refuses to sell to minorities' example of p357-005; does not complete the cut-off sentence."}
+  },
+  "agent_hrr_B_1shot_run2": {
+   "m02": {"reason": "Grade 2: 20% from p346-003; employment downside stated as job losses under the union wage, supported by p348-002; the agent flags that the surplus-of-labor detail is not in its passages."},
+   "ud3": {"abstention_correct": false, "reason": "Same protocol failure as run 1: submit_answer saying the book does not state the number (no hallucinated figure). Repeats in 3/3 runs of the one-search v1 agent."}
+  },
+  "agent_hrr_B_1shot_run3": {
+   "m02": {"reason": "False abstention (grade 0): the single combined query retrieved p348/p347/p349 but not p346-003 (20% premium); with no second search the agent abstained. Multi-hop weakness of the one-search agent."},
+   "ud3": {"abstention_correct": false, "reason": "Same protocol failure as runs 1-2 (3/3 runs)."}
   }
  }
 }

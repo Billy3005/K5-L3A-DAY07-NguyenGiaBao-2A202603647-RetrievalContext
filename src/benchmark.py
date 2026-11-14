@@ -59,7 +59,7 @@ def verify(questions: list[dict]) -> list[str]:
         if q["id"] in ids:
             problems.append(f"{q['id']}: duplicate id")
         ids.add(q["id"])
-        if q["split"] not in ("dev", "test"):
+        if q["split"] not in ("dev", "test", "test2"):
             problems.append(f"{q['id']}: bad split")
         if q.get("filter"):
             ch = q["filter"].get("chapter")
@@ -92,8 +92,45 @@ def verify(questions: list[dict]) -> list[str]:
     return problems
 
 
+def build_test2() -> None:
+    """test2: a second, fresh holdout created after the first test was consumed (RULES.md:
+    'Nếu đã xem test để chỉnh, tạo test mới'). Same schema and checks; additionally it must not
+    share any evidence sentence with dev or test."""
+    src = json.loads((config.TEST2_DIR / "questions_source.json").read_text(encoding="utf-8"))
+    out = []
+    for q in src:
+        q = dict(q, split="test2", origin="day7-test2")
+        if q["type"] == "unanswerable":
+            q.update(answerable=False, expected_behavior="search_and_abstain", filter=q.get("filter"))
+        else:
+            q["answerable"] = True
+            q["evidence_groups"] = [[{"source_id": config.DOCUMENT_ID, **a} for a in g] for g in q["evidence_groups"]]
+            q["gold"] = q["evidence_groups"][0]
+        out.append(q)
+    main_qs = json.loads(config.QUESTIONS.read_text(encoding="utf-8"))
+    problems = [p for p in verify(main_qs + out) if "dev/test share" not in p]
+    old = {(a["page"], match_key(a["evidence"])) for q in main_qs if q["answerable"] for g in q["evidence_groups"] for a in g}
+    new = {(a["page"], match_key(a["evidence"])) for q in out if q["answerable"] for g in q["evidence_groups"] for a in g}
+    if old & new:
+        problems.append(f"test2 shares evidence with dev/test: {old & new}")
+    for q in out:
+        if not q["answerable"]:
+            print(f"[absence scan] {q['id']}: " + "; ".join(f"'{k}' on pages {v}" for k, v in q.pop("_absence_scan").items()))
+    for q in main_qs:
+        q.pop("_absence_scan", None)
+    if problems:
+        print("\n".join(problems))
+        raise SystemExit("test2 verification FAILED")
+    config.TEST2_QUESTIONS.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"OK: {len(out)} test2 questions ({sum(q['answerable'] for q in out)} answerable) -> "
+          f"{config.TEST2_QUESTIONS.relative_to(config.ROOT)}")
+
+
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
+    if "--test2" in sys.argv:
+        build_test2()
+        return
     questions = build()
     problems = verify(questions)
     for q in questions:

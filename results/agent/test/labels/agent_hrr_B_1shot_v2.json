@@ -8,7 +8,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$2.50', '$3.25', '250,000', '550,000']. -p0078-pb1000-000 has gold sentence \"the equilibrium price falls from $3.25 to $2.50, but the equilibrium quantity increases fr...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t02",
@@ -18,7 +19,8 @@
    true
   ],
   "answer_grade": 1,
-  "reason": "Grade 1 (partial): says tougher qualifications such as academic training reduce qualified workers (true, p102-002) but misses the book's statement 'the more required education, the lower the supply' and its examples (PhD mathematicians, cardiologists, physicians); gives the nursing-subsidy example instead. Gold chunk p102-001 was retrieved at rank 5 but dropped by the 4000-char budget (neighbor chunks used part of the budget). The agent flagged the gap itself. Citation p102-002 supports what is stated."
+  "reason": "Grade 1 (partial): says tougher qualifications such as academic training reduce qualified workers (true, p102-002) but misses the book's statement 'the more required education, the lower the supply' and its examples (PhD mathematicians, cardiologists, physicians); gives the nursing-subsidy example instead. Gold chunk p102-001 was retrieved at rank 5 but dropped by the 4000-char budget (neighbor chunks used part of the budget). The agent flagged the gap itself. Citation p102-002 supports what is stated.",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "t03",
@@ -28,7 +30,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0069-pb1000-000 has gold sentence \"A product whose demand falls when income rises, and vice versa, is called an inferior good...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t04",
@@ -38,7 +41,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$12', '1,400'], absent ['1,800'] (checked: not required/expressed otherwise). -p0088-pb1000-003 has gold sentence \"it decides to impose a price floor of $12 per ticket. As a result, the quantity demanded o...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t05",
@@ -49,7 +53,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$16', '$4', '$7', '$9']. -p0344-pb1000-000 has gold sentence \"Marginal Cost of Labor $1 $3 $5 $7 $9...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t06",
@@ -61,7 +66,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0350-pb1000-000 has gold sentence \"The shift from manufacturing to service industries • The force of globalization and increa...\". all 3 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t07",
@@ -71,7 +77,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1938', '40']. -p0342-pb1000-001 has gold sentence \"Fair Labor Standards Act of 1938 Establishes the minimum wage, limits on child labor, and ...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t08",
@@ -82,7 +89,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0066-pb1000-000 has gold sentence \"When the price is below equilibrium, there is excess demand, or a shortage...\"; -p0064-pb1000-002 has gold sentence \"At a price below equilibrium such as $1.20, quantity demanded exceeds quantity supplied, s...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t09",
@@ -90,7 +98,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "answer_grade": 0,
-  "reason": "False abstention (grade 0). p342-001 retrieved at rank 5 but dropped by the context budget (together with its neighbor p342-002)."
+  "reason": "False abstention (grade 0). p342-001 retrieved at rank 5 but dropped by the context budget (together with its neighbor p342-002).",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "t10",
@@ -101,7 +110,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$1.2 million', '$2.8 million', '57%']. -p0355-pb1000-004 has gold sentence \"As of the 2018-19 academic year, women earned 57% of bachelor's degrees....\"; -p0362-pb1000-002 has gold sentence \"adults with a bachelor's degree earn an average of $2.8 million during their careers, $1.2...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "t11",
@@ -112,7 +122,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Grade 2: $700B vs $510B -> $190B shortage; p108-003 text and p108-000 Table 4.5 both support it."
+  "reason": "Grade 2: $700B vs $510B -> $190B shortage; p108-003 text and p108-000 Table 4.5 both support it.",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "ut1",
@@ -120,7 +131,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact, adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The passage says demand for laptops decreased (shifted leftward) as tablet prices fell, but it gives no percentage by which laptop demand fell, so the specific number asked for is not in the retrieved text.\"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ut2",
@@ -128,7 +140,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact, adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages discuss union membership in Canada and the United States, and union density and coverage tables, but none gives a union wage premium figure for Canada. The passages do not state the number the ques\"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ut3",
@@ -136,7 +149,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact, adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages give United Auto Workers membership for 1985 (975,000), 2015 (roughly 390,000), and 2021 (408,000), but do not state the membership in 1960.\"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ut4",
@@ -144,6 +158,7 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every test trace (answer, full text of each cited chunk, search results and context_ids) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact, adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages say college graduates have a \"significantly lower unemployment rate than those with lower educational attainments,\" but they do not give a numerical unemployment rate for U.S. college graduates.\"",
+  "reason_kind": "trace-derived (checked by grader)"
  }
 ]

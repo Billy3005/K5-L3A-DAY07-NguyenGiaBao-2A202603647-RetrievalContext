@@ -8,7 +8,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$1.40', '600']. -p0064-pb1000-002 has gold sentence \"equilibrium point E, with a price of $1.40 and a quantity of 600...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q02",
@@ -18,7 +19,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0062-pb1000-001 has gold sentence \"In short, demand refers to the curve and quantity demanded refers to a (specific) point on...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q03",
@@ -31,7 +33,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Grade 2 although strict context_evidence=False: cited p112-005 says 'economists isolate each change and analyze it independently', equivalent to the gold 'examine the changes one at a time'. First answer was rejected by the validator ([id1, id2] format) and fixed on retry."
+  "reason": "Grade 2 although strict context_evidence=False: cited p112-005 says 'economists isolate each change and analyze it independently', equivalent to the gold 'examine the changes one at a time'. First answer was rejected by the validator ([id1, id2] format) and fixed on retry.",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "q04",
@@ -42,7 +45,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0071-pb1000-001 has gold sentence \"A change in the price of a good or service causes a movement along a specific demand curve...\"; -p0082-pb1000-001 has gold sentence \"Remember, a change in the price of a good never causes the demand or supply curve for that...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q05",
@@ -52,7 +56,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Grade 2: cites p80 Step 2 of the postal example ('Did the change described affect supply or demand?'), equivalent to gold p76; respects chapter-3 filter."
+  "reason": "Grade 2: cites p80 Step 2 of the postal example ('Did the change described affect supply or demand?'), equivalent to gold p76; respects chapter-3 filter.",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "q06",
@@ -62,7 +67,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0087-pb1000-002 has gold sentence \"The sum of consumer surplus and producer surplus is social surplus, also referred to as ec...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q07",
@@ -73,7 +79,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0087-pb1000-003 has gold sentence \"Along with creating inefficiency, price floors and ceilings will also transfer some consum...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q08",
@@ -84,7 +91,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$85,000', '41,000']. -p0100-pb1000-001 has gold sentence \"The equilibrium quantity of nurses in the Minneapolis-St. Paul-Bloomington area is 41,000,...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q09",
@@ -95,7 +103,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Grade 2: generic question; answer gives surplus + the living-wage numbers from p104-004 (1,600 supplied vs 700 demanded), which is the gold example (figure caption instead of body sentence)."
+  "reason": "Grade 2: generic question; answer gives surplus + the living-wage numbers from p104-004 (1,600 supplied vs 700 demanded), which is the gold example (figure caption instead of body sentence).",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "q10",
@@ -105,7 +114,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0105-pb1000-003 has gold sentence \"Even if the minimum wage moves just a little higher, it will still have no effect on the q...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q11",
@@ -116,7 +126,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0113-pb1000-004 has gold sentence \"Those who seek price controls are trying to kill the messenger-or at least to stifle an un...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q12",
@@ -126,7 +137,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0336-pb1000-005 has gold sentence \"If a firm wants to maximize profits, it will never pay more (in terms of wages and benefit...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q13",
@@ -136,7 +148,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0339-pb1000-000 has gold sentence \"An increase in demand for the firm's product drives up the product's price, which increase...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q14",
@@ -147,7 +160,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. no cited chunk holds the gold sentence verbatim; cited ['-p0345-pb1000-001', '-p0343-pb1000-002'] read in full and contain equivalent evidence. all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q15",
@@ -157,7 +171,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0353-pb1000-000 has gold sentence \"it will be closer to Wu if the union has more power and closer to Wm if the monopsonist ha...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q16",
@@ -167,7 +182,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1%']. -p0361-pb1000-002 has gold sentence \"The effects on wages of low-skill workers are not large-perhaps in the range of decline of...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q17",
@@ -178,7 +194,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['15,000', '19,000']. -p0084-pb1000-001 has gold sentence \"At that price ($500), the quantity supplied remains at the same 15,000 rental units, but t...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q18",
@@ -191,7 +208,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0085-pb1000-003 has gold sentence \"The result is a quantity supplied in excess of the quantity demanded (Qd). When quantity s...\". all 4 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q19",
@@ -201,7 +219,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0111-pb1000-003 has gold sentence \"At the price ceiling (Rc), quantity demanded will exceed quantity supplied....\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q20",
@@ -212,7 +231,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0112-pb1000-000 has gold sentence \"A price ceiling that is set at a relatively high level is nonbinding, and it will have no ...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q21",
@@ -222,7 +242,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. -p0348-pb1000-000 has gold sentence \"At the higher union wage Wu, the firms in this industry will hire less labor than they wou...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "q22",
@@ -233,7 +254,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Grade 2: core Becker claim from p357-005; the agent explicitly noted the passage is cut off and did not complete it."
+  "reason": "Grade 2: core Becker claim from p357-005; the agent explicitly noted the passage is cut off and did not complete it.",
+  "reason_kind": "hand-written exception/note"
  },
  {
   "query_id": "m01",
@@ -244,7 +266,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$80', '28 million']. -p0086-pb1000-002 has gold sentence \"The equilibrium price is $80 and the equilibrium quantity is 28 million....\"; -p0087-pb1000-001 has gold sentence \"The extra benefit producers receive from selling a good or service, measured by the price ...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "m02",
@@ -255,7 +278,8 @@
    true
   ],
   "answer_grade": 2,
-  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['20%']. -p0346-pb1000-003 has gold sentence \"their members earn about 20% more than nonunion workers...\"; -p0348-pb1000-000 has gold sentence \"At the higher union wage Wu, the firms in this industry will hire less labor than they wou...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ud1",
@@ -263,7 +287,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The searches returned passages on gasoline demand and supply schedules (Chapter 3, Figure 3.4 and Table 3.3) but no price elasticity of demand figure for gasoline. Repeated searches on elasticity and gasoline did not sur\"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ud2",
@@ -271,7 +296,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The searched passages discuss usury laws in general (e.g., an example cap of 30% per year) but do not mention Arkansas or its specific maximum interest rate. Answering would require outside knowledge.\"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ud3",
@@ -279,7 +305,8 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The textbook passages retrieved only mention that the H1B visa program lets U.S. high-tech companies admit highly skilled workers (micro3e-p0362-pb1000-000). They do not state how many H1B visas the United States issues \"",
+  "reason_kind": "trace-derived (checked by grader)"
  },
  {
   "query_id": "ud4",
@@ -287,6 +314,7 @@
   "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
   "citation_support": [],
   "abstention_correct": true,
-  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+  "reason": "Abstained correctly; agent's reason: \"The textbook passages describe the Minneapolis-St. Paul registered nurse labor market (about 41,000 nurses in 2020) but do not give the share of those nurses who belong to a labor union. The union statistics found cover \"",
+  "reason_kind": "trace-derived (checked by grader)"
  }
 ]

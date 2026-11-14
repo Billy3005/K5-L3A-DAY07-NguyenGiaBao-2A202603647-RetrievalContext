@@ -1,0 +1,316 @@
+{
+ "compared": 22,
+ "identical": 22,
+ "day6_source": "Day 6 starter/results/traces/{dev,test}.jsonl, strategy C",
+ "day7_source": "results/retrieval/dev/dense_B.jsonl",
+ "rows": [
+  {
+   "id": "q01",
+   "day6_top3": [
+    "micro3e-p0064-pb1000-001",
+    "micro3e-p0061-pb1000-001",
+    "micro3e-p0063-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0064-pb1000-001",
+    "micro3e-p0061-pb1000-001",
+    "micro3e-p0063-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q02",
+   "day6_top3": [
+    "micro3e-p0062-pb1000-001",
+    "micro3e-p0068-pb1000-001",
+    "micro3e-p0063-pb1000-000"
+   ],
+   "day7_top3": [
+    "micro3e-p0062-pb1000-001",
+    "micro3e-p0068-pb1000-001",
+    "micro3e-p0063-pb1000-000"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q03",
+   "day6_top3": [
+    "micro3e-p0112-pb1000-005",
+    "micro3e-p0076-pb1000-002",
+    "micro3e-p0077-pb1000-000"
+   ],
+   "day7_top3": [
+    "micro3e-p0112-pb1000-005",
+    "micro3e-p0076-pb1000-002",
+    "micro3e-p0077-pb1000-000"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q04",
+   "day6_top3": [
+    "micro3e-p0069-pb1000-004",
+    "micro3e-p0071-pb1000-002",
+    "micro3e-p0068-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0069-pb1000-004",
+    "micro3e-p0071-pb1000-002",
+    "micro3e-p0068-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q05",
+   "day6_top3": [
+    "micro3e-p0076-pb1000-001",
+    "micro3e-p0076-pb1000-003",
+    "micro3e-p0078-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0076-pb1000-001",
+    "micro3e-p0076-pb1000-003",
+    "micro3e-p0078-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q06",
+   "day6_top3": [
+    "micro3e-p0087-pb1000-002",
+    "micro3e-p0088-pb1000-000",
+    "micro3e-p0086-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0087-pb1000-002",
+    "micro3e-p0088-pb1000-000",
+    "micro3e-p0086-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q07",
+   "day6_top3": [
+    "micro3e-p0087-pb1000-003",
+    "micro3e-p0088-pb1000-004",
+    "micro3e-p0088-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0087-pb1000-003",
+    "micro3e-p0088-pb1000-004",
+    "micro3e-p0088-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q08",
+   "day6_top3": [
+    "micro3e-p0100-pb1000-001",
+    "micro3e-p0100-pb1000-003",
+    "micro3e-p0098-pb1000-004"
+   ],
+   "day7_top3": [
+    "micro3e-p0100-pb1000-001",
+    "micro3e-p0100-pb1000-003",
+    "micro3e-p0098-pb1000-004"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q09",
+   "day6_top3": [
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0108-pb1000-002"
+   ],
+   "day7_top3": [
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0108-pb1000-002"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q10",
+   "day6_top3": [
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0105-pb1000-004",
+    "micro3e-p0106-pb1000-000"
+   ],
+   "day7_top3": [
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0105-pb1000-004",
+    "micro3e-p0106-pb1000-000"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q11",
+   "day6_top3": [
+    "micro3e-p0113-pb1000-003",
+    "micro3e-p0113-pb1000-004",
+    "micro3e-p0082-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0113-pb1000-003",
+    "micro3e-p0113-pb1000-004",
+    "micro3e-p0082-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q12",
+   "day6_top3": [
+    "micro3e-p0336-pb1000-004",
+    "micro3e-p0343-pb1000-002",
+    "micro3e-p0341-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0336-pb1000-004",
+    "micro3e-p0343-pb1000-002",
+    "micro3e-p0341-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q13",
+   "day6_top3": [
+    "micro3e-p0339-pb1000-000",
+    "micro3e-p0336-pb1000-005",
+    "micro3e-p0348-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0339-pb1000-000",
+    "micro3e-p0336-pb1000-005",
+    "micro3e-p0348-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q14",
+   "day6_top3": [
+    "micro3e-p0343-pb1000-002",
+    "micro3e-p0343-pb1000-003",
+    "micro3e-p0345-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0343-pb1000-002",
+    "micro3e-p0343-pb1000-003",
+    "micro3e-p0345-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q15",
+   "day6_top3": [
+    "micro3e-p0353-pb1000-000",
+    "micro3e-p0352-pb1000-003",
+    "micro3e-p0345-pb1000-000"
+   ],
+   "day7_top3": [
+    "micro3e-p0353-pb1000-000",
+    "micro3e-p0352-pb1000-003",
+    "micro3e-p0345-pb1000-000"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q16",
+   "day6_top3": [
+    "micro3e-p0361-pb1000-002",
+    "micro3e-p0361-pb1000-003",
+    "micro3e-p0361-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0361-pb1000-002",
+    "micro3e-p0361-pb1000-003",
+    "micro3e-p0361-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q17",
+   "day6_top3": [
+    "micro3e-p0084-pb1000-001",
+    "micro3e-p0084-pb1000-000",
+    "micro3e-p0083-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0084-pb1000-001",
+    "micro3e-p0084-pb1000-000",
+    "micro3e-p0083-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q18",
+   "day6_top3": [
+    "micro3e-p0085-pb1000-003",
+    "micro3e-p0083-pb1000-000",
+    "micro3e-p0073-pb1000-004"
+   ],
+   "day7_top3": [
+    "micro3e-p0085-pb1000-003",
+    "micro3e-p0083-pb1000-000",
+    "micro3e-p0073-pb1000-004"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q19",
+   "day6_top3": [
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0111-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0105-pb1000-003",
+    "micro3e-p0111-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q20",
+   "day6_top3": [
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0108-pb1000-002",
+    "micro3e-p0108-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0112-pb1000-000",
+    "micro3e-p0108-pb1000-002",
+    "micro3e-p0108-pb1000-003"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q21",
+   "day6_top3": [
+    "micro3e-p0348-pb1000-002",
+    "micro3e-p0348-pb1000-001",
+    "micro3e-p0347-pb1000-001"
+   ],
+   "day7_top3": [
+    "micro3e-p0348-pb1000-002",
+    "micro3e-p0348-pb1000-001",
+    "micro3e-p0347-pb1000-001"
+   ],
+   "identical": true
+  },
+  {
+   "id": "q22",
+   "day6_top3": [
+    "micro3e-p0357-pb1000-005",
+    "micro3e-p0358-pb1000-002",
+    "micro3e-p0358-pb1000-003"
+   ],
+   "day7_top3": [
+    "micro3e-p0357-pb1000-005",
+    "micro3e-p0358-pb1000-002",
+    "micro3e-p0358-pb1000-003"
+   ],
+   "identical": true
+  }
+ ]
+}

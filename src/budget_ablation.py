@@ -19,9 +19,11 @@ BUDGETS = (2000, 4000, 6000, 8000)
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     questions = {q["id"]: q for q in json.loads(config.QUESTIONS.read_text(encoding="utf-8"))}
+    if config.TEST2_QUESTIONS.exists():
+        questions.update({q["id"]: q for q in json.loads(config.TEST2_QUESTIONS.read_text(encoding="utf-8"))})
     cmaps = {ix: {c["id"]: c for c in load_chunks(ix)} for ix in config.INDEXES}
     rows = []
-    for split in ("dev", "test"):
+    for split in ("dev", "test", "test2"):
         for path in sorted((config.RESULTS / "retrieval" / split).glob("*.jsonl")):
             traces = [t for t in read_jsonl(path) if t["answerable"] and t["status"] == "ok"]
             row = {"split": split, "config": path.stem, "N": len(traces),

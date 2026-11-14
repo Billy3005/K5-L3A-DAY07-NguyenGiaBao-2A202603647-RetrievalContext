@@ -12,7 +12,9 @@ Khóa ở commit này **trước mọi lần chạy retrieval hoặc agent**. D�
 - **Vì sao đưa test Day 6 vào dev:** test Day 6 đã được chạy và phân tích hậu kiểm (thí nghiệm B500 được đề xuất *sau khi* xem kết quả test). Vì vậy nó không còn là holdout độc lập, và theo RULES phải dùng một test mới.
 - **Test mới:** được viết từ những đoạn mà không câu dev nào dùng làm evidence. Script kiểm tra dev và test không chung câu evidence nào. Các câu test có thể cùng *mục* với câu dev (corpus chỉ có 78 trang, các mục đều đã có câu dev), nhưng khác trang, đoạn và đáp án.
 - **Loại câu ở test:** 2 direct, 3 paraphrase, 2 conditional/bảng, 2 filter, 2 multi-hop, và 4 câu thiếu evidence.
-- **Hạn chế đã biết:** người viết câu hỏi biết trang gold, nên cách diễn đạt có thể vô tình thuận lợi cho truy xuất. Câu hỏi được viết bằng **tiếng Anh**, cùng ngôn ngữ với corpus, giống Day 6. Bản nháp do Claude Code soạn; học viên duyệt từng câu.
+- **Hạn chế đã biết:** người viết câu hỏi biết trang gold, nên cách diễn đạt có thể vô tình thuận lợi cho truy xuất. Câu hỏi được viết bằng **tiếng Anh**, cùng ngôn ngữ với corpus, giống Day 6. Các câu mới do Claude Code soạn từ việc đọc trang gốc và được máy kiểm chứng evidence.
+  - *Đính chính ngày 14/11/2026, sau khi khóa; chỉ sửa câu chữ, không đổi câu hỏi hay nhãn:* bản trước ghi "học viên duyệt từng câu", nhưng thực tế học viên chưa duyệt độc lập từng câu benchmark.
+  - Phần duyệt của học viên nằm ở [results/agent/REVIEW.md](../results/agent/REVIEW.md) và [results/agent/BLIND_REVIEW.md](../results/agent/BLIND_REVIEW.md).
 
 ## Schema
 

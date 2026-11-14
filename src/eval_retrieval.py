@@ -69,7 +69,7 @@ def run_config(name: str, questions: list[dict]) -> tuple[list[dict], dict]:
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", choices=("dev", "test"), required=True)
+    ap.add_argument("--split", choices=("dev", "test", "test2"), required=True)
     ap.add_argument("--configs", nargs="+", default=list(config.RETRIEVAL_CONFIGS))
     args = ap.parse_args()
     questions = load_questions(args.split, configs=args.configs, stage="retrieval")

@@ -1,0 +1,21 @@
+{
+  "n": 28,
+  "errors": 0,
+  "tool_use": "28/28",
+  "searches_distribution": {
+    "1": 18,
+    "2": 9,
+    "4": 1
+  },
+  "model_calls_mean": 2.21,
+  "context_evidence": "22/24",
+  "answered_on_answerable": "24/24",
+  "abstained_on_unanswerable": "4/4",
+  "validation_errors": 0,
+  "avg_context_chars": 4404,
+  "input_tokens": 129387,
+  "output_tokens": 9654,
+  "cost_usd_total": 0.01777,
+  "cost_usd_per_q": 0.000635,
+  "median_latency_s": 4.31
+}

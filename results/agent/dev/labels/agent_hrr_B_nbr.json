@@ -1,0 +1,322 @@
+[
+ {
+  "query_id": "q01",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   false
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: $1.40 / 600 from p64-002 (gold). Citation p64-001 only says Figure 3.4 shows the interaction; it states no number, so it does not support the cited sentence.",
+  "reason_kind": "hand-written exception/note"
+ },
+ {
+  "query_id": "q02",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0062-pb1000-001 has gold sentence \"In short, demand refers to the curve and quantity demanded refers to a (specific) point on...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q03",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0067-pb1000-000 has gold sentence \"The answer is that we examine the changes one at a time, assuming the other factors are he...\". all 3 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q04",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0071-pb1000-001 has gold sentence \"A change in the price of a good or service causes a movement along a specific demand curve...\"; -p0082-pb1000-001 has gold sentence \"Remember, a change in the price of a good never causes the demand or supply curve for that...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q05",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0076-pb1000-002 has gold sentence \"Step 2. Decide whether the economic change you are analyzing affects demand or supply....\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q06",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0087-pb1000-002 has gold sentence \"The sum of consumer surplus and producer surplus is social surplus, also referred to as ec...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q07",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0087-pb1000-003 has gold sentence \"Along with creating inefficiency, price floors and ceilings will also transfer some consum...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q08",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$85,000', '41,000']. -p0100-pb1000-001 has gold sentence \"The equilibrium quantity of nurses in the Minneapolis-St. Paul-Bloomington area is 41,000,...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q09",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1,600', '700']. no cited chunk holds the gold sentence verbatim; cited ['-p0104-pb1000-004', '-p0105-pb1000-003'] read in full and contain equivalent evidence. all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q10",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0105-pb1000-003 has gold sentence \"Even if the minimum wage moves just a little higher, it will still have no effect on the q...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q11",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0113-pb1000-004 has gold sentence \"Those who seek price controls are trying to kill the messenger-or at least to stifle an un...\". all 3 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q12",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0336-pb1000-005 has gold sentence \"If a firm wants to maximize profits, it will never pay more (in terms of wages and benefit...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q13",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0339-pb1000-000 has gold sentence \"An increase in demand for the firm's product drives up the product's price, which increase...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q14",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0345-pb1000-000 has gold sentence \"In other words, under monopsony employers hire fewer workers and pay a lower wage....\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q15",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0353-pb1000-000 has gold sentence \"it will be closer to Wu if the union has more power and closer to Wm if the monopsonist ha...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q16",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['1%']. -p0361-pb1000-002 has gold sentence \"The effects on wages of low-skill workers are not large-perhaps in the range of decline of...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q17",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['15,000', '19,000']. -p0084-pb1000-001 has gold sentence \"At that price ($500), the quantity supplied remains at the same 15,000 rental units, but t...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q18",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. no cited chunk holds the gold sentence verbatim; cited ['-p0086-pb1000-000', '-p0087-pb1000-003', '-p0088-pb1000-003'] read in full and contain equivalent evidence. all 3 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q19",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0111-pb1000-003 has gold sentence \"At the price ceiling (Rc), quantity demanded will exceed quantity supplied....\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q20",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0112-pb1000-000 has gold sentence \"A price ceiling that is set at a relatively high level is nonbinding, and it will have no ...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q21",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. -p0348-pb1000-000 has gold sentence \"At the higher union wage Wu, the firms in this industry will hire less labor than they wou...\". all 1 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "q22",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2 (fixed by the neighbor chunk alone): p358-000 completes the cut-off Becker sentence ('other profit-seeking employers can hire these workers').",
+  "reason_kind": "hand-written exception/note"
+ },
+ {
+  "query_id": "m01",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['$80', '28 million']. -p0086-pb1000-002 has gold sentence \"The equilibrium price is $80 and the equilibrium quantity is 28 million....\"; -p0087-pb1000-001 has gold sentence \"The extra benefit producers receive from selling a good or service, measured by the price ...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "m02",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: answer matches the expected answer. key figures present ['20%']. -p0346-pb1000-003 has gold sentence \"their members earn about 20% more than nonunion workers...\"; -p0348-pb1000-000 has gold sentence \"At the higher union wage Wu, the firms in this industry will hire less labor than they wou...\". all 2 citation(s) read and support their sentences.",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "ud1",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages cover gasoline demand schedules and equilibrium (Chapter 3) and general demand/supply discussion (Chapter 4), but none report a price elasticity of demand value for gasoline. Four searches with var\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "ud2",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages discuss usury laws only in general terms (e.g., a hypothetical 30% per year ceiling in chapter 4, section 4.2) and do not mention Arkansas or any Arkansas usury limit. The specific Arkansas maximum\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "ud3",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The retrieved passages say the H1B program admits highly skilled workers and that the Trump Administration reduced the number of H1B immigrants, but none state how many H1B visas the United States issues each year. I sea\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ },
+ {
+  "query_id": "ud4",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in results/agent/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Abstained correctly; agent's reason: \"The passages describe the Minneapolis-St. Paul registered nurse labor market (about 41,000 nurses in 2020, with supply and demand schedules), but nowhere state what share of these nurses belong to a labor union. The only\"",
+  "reason_kind": "trace-derived (checked by grader)"
+ }
+]

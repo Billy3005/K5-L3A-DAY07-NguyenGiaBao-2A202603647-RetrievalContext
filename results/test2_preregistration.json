@@ -1,0 +1,17 @@
+{
+ "written": "2026-11-14, after the single run on test (9fbe014) and after the post-test dev runs; before any test2 run",
+ "purpose": "Confirm, on fresh questions, hypotheses formed after looking at test. test2 is NOT used to change results/selection.json.",
+ "retrieval": {"configs": ["dense_B", "hybrid_rerank_B"]},
+ "agent": {
+  "configs": ["agent_dense_B", "agent_hrr_B_1shot", "agent_hrr_B", "agent_hrr_B_ctx8k"],
+  "roles": {"agent_dense_B": "baseline", "agent_hrr_B_1shot": "selected on dev (locked)",
+            "agent_hrr_B": "multi-search, 4000-char budget", "agent_hrr_B_ctx8k": "multi-search, 8000-char budget (single change vs agent_hrr_B)"}
+ },
+ "hypotheses": {
+  "H1_budget": "Retrieval-only: Context Evidence of hybrid_rerank_B at 8000 chars >= at 4000 chars (budget_ablation). Agent: agent_hrr_B_ctx8k has Context Evidence >= agent_hrr_B and no more false abstentions.",
+  "H2_multisearch": "On the 2 multi-hop questions (a09, a10), agent_hrr_B (up to 4 searches) has no more false abstentions than agent_hrr_B_1shot.",
+  "H3_replication": "Selected agent_hrr_B_1shot vs baseline agent_dense_B: grounded mean difference reported as is (test showed a tie, 1.82 vs 1.82)."
+ },
+ "decision_rule": "Each hypothesis is reported as supported / not supported / inconclusive (difference <= 1 question). With 10 answerable questions, one question = 0.2 points of grounded mean; no claim of statistical significance.",
+ "grading": "Same 0/1/2 scale and citation/abstention rules as dev/test; every trace read; exceptions with hand-written reasons in results/agent/test2/labels/grading_spec_test2.json."
+}

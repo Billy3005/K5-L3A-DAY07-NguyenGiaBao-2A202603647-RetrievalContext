@@ -8,10 +8,16 @@
 
 - **Hệ thống:** agent `claude-haiku-5-5` gọi tool `search_textbook` trên index Day 6 (e5-base, pgvector). Agent trả lời có citation `[chunk-id]` hoặc gọi `abstain`.
 - **Phương pháp retrieval:** 4 phương pháp (dense, BM25, hybrid RRF, hybrid + cross-encoder rerank) trên 2 index (B, B500), tổng cộng 7 cấu hình.
-- **Quy trình:** benchmark 43 câu và tiêu chí chọn được **khóa trước mọi lần chạy** (commit `a6ab742`). Cấu hình được chọn trên dev bằng script (commit `ab54365`). Test được chạy **một lần**.
+- **Quy trình:**
+  - Benchmark 43 câu, định nghĩa metric, cấu hình retrieval và *câu chữ* của quy tắc chọn được khóa trước mọi lần chạy (commit `a6ab742`).
+  - Các cấu hình agent, bản v2 và script `select_config.py` được viết trong lúc làm dev và commit cùng kết quả dev (`ab54365`), **trước** khi chạy test.
+  - Test được chạy **một lần** (`9fbe014`). Sau đó tạo **test2 mới**, khóa riêng, để kiểm chứng các thay đổi làm sau khi đã xem test.
 - **Retrieval:** trên dev, `hybrid_rerank_B` đạt Evidence Hit@3 **22/24** so với baseline dense **15/24**. Trên test kết quả đảo chiều: dense 11/11, rerank 10/11. Với N=11, chênh 1 câu tương đương 9 điểm %.
 - **Agent:** trên test, cả baseline và cấu hình chọn đều đạt grounded **1.82/2**, từ chối đúng **4/4**, citation hợp lệ **15/15**. Mỗi cấu hình có 1 câu từ chối nhầm (t09).
-- **Phát hiện chính:** ở t09, retriever **có tìm thấy** chunk evidence (hạng 5, hai lần), nhưng **budget context 4000 ký tự loại nó đi** trước khi model kịp đọc. Lỗi nằm ở bước chọn context, không phải ở retrieval. Chẩn đoán hậu kiểm: với budget 8000 ký tự, Context Evidence của `hybrid_rerank_B` trên test tăng từ 9/11 lên 11/11.
+- **Phát hiện chính:** câu t09 (multi-hop, FLSA cộng nguyên nhân công đoàn suy giảm) bị cả 3 agent từ chối nhầm, nhưng **nguyên nhân khác nhau theo cấu hình**:
+  - Ở `agent_dense_B` và `agent_hrr_B_1shot_v2`, retriever **có tìm thấy** chunk FLSA (hạng 5) nhưng **budget context 4000 ký tự loại nó đi** trước khi model đọc. Đây là lỗi ở bước chọn context.
+  - Ở **cấu hình được chọn** `agent_hrr_B_1shot`, một query gộp cả hai ý nên chunk FLSA **không vào top-5**. Đây là lỗi retrieval multi-hop của agent chỉ search một lượt.
+  - Chẩn đoán hậu kiểm: với budget 8000 ký tự, Context Evidence của `hybrid_rerank_B` trên test tăng từ 9/11 lên 11/11. Cách sửa này được kiểm chứng trên **test2** mới (xem phần dưới).
 - **Chi phí:** 185 lượt chạy agent, khoảng **$0.11** tổng cộng; truy xuất 0 USD (chạy local).
 
 ## Dữ liệu và benchmark
@@ -169,7 +175,9 @@ Trên dev, budget 4000 đã bão hòa với rerank nên dev không thể cho th�
 - **Mẫu nhỏ:** test có 11 câu có đáp án (1 câu tương đương 9 điểm %) và 4 câu thiếu evidence; dev có 24 câu. Không chênh lệch nào ở đây có ý nghĩa thống kê.
 - **Không tất định:** Haiku 5.5 không cho đặt temperature, và mỗi cấu hình chỉ chạy một lần. Query do model tự viết thay đổi giữa các lần chạy (t02 cho hai query khác nhau ở 1shot và 1shot_v2). Mức dao động chưa được đo.
 - **Benchmark do người biết gold viết:** cách diễn đạt có thể vô tình thuận lợi cho truy xuất, và dev là câu Day 6 nên có trần cao. Định nghĩa hit chặt đánh giá thấp bằng chứng tương đương (q03, q09, m02). Nhãn chấm tay có ghi nhận các trường hợp này.
-- **Nhãn:** do LLM chấm nháp (Claude Code, Opus 5.5), đã đọc toàn văn mọi chunk được trích. Phần duyệt của học viên nằm ở [results/agent/REVIEW.md](../../results/agent/REVIEW.md). Đây không phải chú thích của hai người chấm độc lập.
+- **Nhãn:** do LLM chấm nháp (Claude Code, Opus 5.5), đã đọc toàn văn mọi chunk được trích.
+  - Học viên đã duyệt 11 mục: 9 câu test (7 câu có đáp án, 2 câu thiếu evidence) và 2 lỗi dev. Học viên đồng ý với giá trị nhãn ở cả **11/11** mục, và làm rõ phạm vi citation của q22 ([results/agent/REVIEW.md](../../results/agent/REVIEW.md)).
+  - Người duyệt đã xem nhãn và lý do của LLM trước khi duyệt, nên đây không phải chú thích của hai người chấm độc lập và có rủi ro thiên lệch tự động hóa.
 - **Bỏ qua hình:** hình và đồ thị không được trích ở Day 6, nên câu hỏi về hình nằm ngoài phạm vi.
 - **Phân tích hậu kiểm:** chẩn đoán budget được thêm sau khi xem test và chỉ mang tính chẩn đoán. Kết luận về budget cần một test mới.
 

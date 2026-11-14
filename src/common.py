@@ -9,6 +9,14 @@ from . import config
 def load_questions(split: str, *, configs: list[str] | None = None, stage: str = "retrieval") -> list[dict]:
     """Return questions of one split. The test split is locked until selection.json exists and
     only the pre-registered baseline + selected configs may run on it."""
+    if split == "test2":
+        if not config.TEST2_PREREG.exists():
+            raise SystemExit("test2 is locked: commit results/test2_preregistration.json first")
+        prereg = json.loads(config.TEST2_PREREG.read_text(encoding="utf-8"))
+        bad = [c for c in configs or [] if c not in prereg[stage]["configs"]]
+        if bad:
+            raise SystemExit(f"configs {bad} were not pre-registered for test2")
+        return json.loads(config.TEST2_QUESTIONS.read_text(encoding="utf-8"))
     if split == "test":
         if not config.SELECTION.exists():
             raise SystemExit("test split is locked: commit results/selection.json (chosen on dev) first")

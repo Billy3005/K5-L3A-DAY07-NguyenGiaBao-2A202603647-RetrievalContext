@@ -69,7 +69,7 @@ def auto_metrics(rows: list[dict]) -> dict:
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", choices=("dev", "test"), required=True)
+    ap.add_argument("--split", choices=("dev", "test", "test2"), required=True)
     ap.add_argument("--configs", nargs="+", default=list(config.AGENT_CONFIGS))
     ap.add_argument("--only", nargs="+", help="debug: run a subset of question ids (output goes to *_debug)")
     ap.add_argument("--tag", default="", help="suffix for repeated runs, e.g. _run2")

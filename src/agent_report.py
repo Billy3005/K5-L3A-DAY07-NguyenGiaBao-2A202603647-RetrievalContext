@@ -62,7 +62,7 @@ def md_row(split: str, name: str, s: dict) -> str:
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", choices=("dev", "test"), required=True)
+    ap.add_argument("--split", choices=("dev", "test", "test2"), required=True)
     ap.add_argument("--configs", nargs="+", required=True)
     args = ap.parse_args()
     print("| Cấu hình / split | Tool use | Số lượt search | Grounded 0/1/2 → TB | Citation hợp lệ | Câu có citation "
