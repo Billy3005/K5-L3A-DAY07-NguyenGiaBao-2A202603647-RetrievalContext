@@ -241,12 +241,17 @@ Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất,
   - **Cách đọc kết quả:** con số cao một phần vì các câu này dễ phân loại (10/11 câu có đáp án đạt 2, 4/4 câu từ chối rõ ràng). Kappa trên 10 câu, với số mức nhãn ít, nên khoảng tin cậy rộng. Kết quả này cho thấy nhãn LLM **không lệch so với người** trên mẫu này; nó chưa chứng minh nhãn LLM đúng trên các câu khó, chẳng hạn kiểu lỗi q22 ở dev.
   - Mỗi nhãn có lý do cụ thể: hoặc viết tay cho các ngoại lệ, hoặc sinh từ trace (chunk nào chứa câu gold, con số nào khớp, lý do từ chối nguyên văn). Trường `reason_kind` cho biết nhãn thuộc loại nào.
   - **Phạm vi người duyệt:** tổng cộng 21 mục khác nhau được người đọc lại. Gồm 11 mục ở REVIEW.md, nơi người duyệt đã xem nhãn LLM nên có rủi ro thiên lệch tự động hóa, và 10 mục chấm mù. Khoảng 360 nhãn còn lại (dev, các cấu hình khác, test2) chỉ do LLM chấm. Chúng có lý do kiểm chứng được, nhưng chưa được người đọc lại.
-- **Bỏ qua hình:** hình và đồ thị không được trích ở Day 6, nên câu hỏi về hình nằm ngoài phạm vi.
+- **Bỏ qua hình (phần cơ bản):** index Day 6 không trích hình và đồ thị, nên câu hỏi về hình nằm ngoài phạm vi phần cơ bản. Phần nâng cao xử lý chúng (xem mục dưới).
 - **Phân tích hậu kiểm:** chẩn đoán budget được thêm sau khi xem test. test2 được tạo để kiểm chứng nó, nhưng không tạo ra tình huống gây lỗi, nên **giả thuyết về budget vẫn chưa được xác nhận** trên dữ liệu độc lập.
 
 ## Thử thách nâng cao
 
-Không thực hiện. Thử thách yêu cầu tài liệu từ 100 trang có bảng, ảnh và biểu đồ, test ≥30 câu và đạt ≥90%, không cộng điểm một phần. Tôi ưu tiên làm phần cơ bản cho chặt chẽ: chốt benchmark trước, chấm từng trace, phân tích lỗi. Ứng viên tự nhiên nếu làm tiếp là toàn bộ cuốn sách OpenStax (595 trang, nhiều bảng và đồ thị có nhãn số), dùng PyMuPDF `find_tables()` và mô tả hình bằng model vision.
+Đã thực hiện. Báo cáo đầy đủ nằm ở [advanced/REPORT.md](../../advanced/REPORT.md); code, benchmark, trace và nhãn nằm trong [advanced/](../../advanced/). Tóm tắt:
+
+- **Tài liệu:** toàn bộ cuốn OpenStax *Principles of Microeconomics 3e* (595 trang, CC BY-NC-SA 4.0). Index trang 21–576 thành 2.194 unit: 1.829 đoạn text, 167 bảng, 198 hình. Hình được mô tả bằng Haiku vision với chi phí $0.10; mỗi unit giữ trang gốc và bbox.
+- **Agent:** `claude-haiku-5-5` với `search_document(query, content_type)` và **`view_region`**. Tool này render vùng gốc trên trang PDF để đọc lại con số trong bảng hoặc hình, thay vì tin mô tả AI hay text trích. Trên dev, nó là khác biệt duy nhất giữa các cấu hình: 18/18 so với 17/18 và 17/18.
+- **Benchmark:** dev 18 câu, test 30 câu (6 bảng, 5 sơ đồ, 5 biểu đồ, 4 multi-hop, 4 text, 6 thiếu evidence). Benchmark và quy tắc chọn được khóa trước khi chạy (`c200359`, `36f5d53`). Cấu hình được chọn trên dev (`bd6f3de`), và test chạy đúng một lần (`3690d62`).
+- **Test:** __ADV_TEST__ Chi phí $0.046 cho 30 câu; 0 lỗi hệ thống.
 
 ## Sử dụng AI
 

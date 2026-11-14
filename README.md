@@ -61,7 +61,7 @@ Trên Windows nên đặt `PYTHONUTF8=1`. Nếu thiếu, test `test_cli_uses_req
 
 | Bước | Lệnh | Output |
 |---|---|---|
-| 0. Test code (offline) | `python -m unittest discover -s tests -v` | 24 test (15 starter + 9 Day 7) |
+| 0. Test code (offline) | `python -m unittest discover -s tests -v` | 29 test (15 starter + 9 Day 7 + 5 phần nâng cao) |
 | 1. Dựng và kiểm chứng benchmark | `python -m src.benchmark` | `benchmark/questions.json` |
 | 2. Export index Day 6 | `python -m src.cli export` | `data/day6_export/` (+ `manifest.json` có hash phiên bản index) |
 | 3. Retrieval trên dev | `python -m src.eval_retrieval --split dev` | `results/retrieval/dev/*.jsonl`, `metrics.csv` |
@@ -89,6 +89,14 @@ Code chặn chạy `--split test` khi chưa có `results/selection.json`, và ch
 | Chi phí agent (Haiku 5.5) | khoảng $0.0005–0.0007/câu | | tổng cả bài $0.23 (381 lượt chạy) |
 
 Phân tích, lỗi và giới hạn nằm trong [báo cáo](report/individual/2A202603647_NguyenGiaBao.md). Nhãn do LLM chấm nháp; phiếu duyệt của học viên nằm ở [results/agent/REVIEW.md](results/agent/REVIEW.md).
+
+### Thử thách nâng cao
+
+Toàn bộ nằm trong [advanced/](advanced/); báo cáo ở [advanced/REPORT.md](advanced/REPORT.md).
+- **Phạm vi:** cả cuốn sách 595 trang (text, 167 bảng, 198 hình mô tả bằng vision), agent có tool `view_region` để đọc lại vùng gốc trên PDF.
+- **Benchmark:** dev 18 câu, test 30 câu.
+- **Kết quả test (chạy một lần):** __ADV_TEST__
+- **Lệnh chạy:** xem [advanced/REPORT.md §11](advanced/REPORT.md#11-tái-lập).
 
 ### Cấu trúc code
 

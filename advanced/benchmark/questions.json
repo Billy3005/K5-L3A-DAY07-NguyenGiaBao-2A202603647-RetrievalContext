@@ -1086,5 +1086,6 @@
    "check": "Figure 13.4 axis ends at 2020; no patent counts for 2021 in the text.",
    "evidence_groups": []
   }
- ]
+ ],
+ "gold_source_correction": "Added 2026-11-14 after the test run, without changing any answer: the 'gold_source' sentence overstates. Figure/diagram/chart gold was read from rendered crops. Table gold was read from the PDF text layer (digital text, not OCR); the 9 test tables (14.6, 15.1, 16.2, 17.2, 20.2, 13.3, 19.1, 19.4, 14.8) were then re-checked on page images and all match; the dev tables (3.1, 3.2, 3.3, 3.4, 3.5, 3.7, 4.4, 7.1, 15.5, 15.7) were not image-checked except Table 3.2."
 }
