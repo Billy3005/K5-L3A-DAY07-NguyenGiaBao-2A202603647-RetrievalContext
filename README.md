@@ -95,7 +95,7 @@ Phân tích, lỗi và giới hạn nằm trong [báo cáo](report/individual/2A
 Toàn bộ nằm trong [advanced/](advanced/); báo cáo ở [advanced/REPORT.md](advanced/REPORT.md).
 - **Phạm vi:** cả cuốn sách 595 trang (text, 167 bảng, 198 hình mô tả bằng vision), agent có tool `view_region` để đọc lại vùng gốc trên PDF.
 - **Benchmark:** dev 18 câu, test 30 câu.
-- **Kết quả test (chạy một lần):** __ADV_TEST__
+- **Kết quả test (chạy một lần):** **30/30 (100%)**, ngưỡng 27/30; mọi nhóm đạt tối đa, từ chối đúng 6/6, 0 lỗi, $0.046. Học viên đã đối chiếu cả 30 nhãn với ảnh trang gốc (lần duyệt không mù).
 - **Lệnh chạy:** xem [advanced/REPORT.md §11](advanced/REPORT.md#11-tái-lập).
 
 ### Cấu trúc code

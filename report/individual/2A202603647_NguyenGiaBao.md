@@ -23,6 +23,7 @@
   - Chạy lại cấu hình chọn 3 lần: lỗi ud3 lặp lại ở cả 3/3 lần chạy.
   - Tạo **test2 mới** (10 câu có đáp án, 4 câu thiếu evidence), khóa trước khi chạy. Trên test2, retrieval chọn đạt Hit@1 **9/10** so với dense 5/10; cả 4 agent đạt **2.00/2** và từ chối đúng 4/4.
 - **Chi phí:** 381 lượt chạy agent, khoảng **$0.23** tổng cộng; truy xuất 0 USD (chạy local).
+- **Thử thách nâng cao:** index toàn bộ cuốn sách 595 trang (text, bảng, hình qua vision), agent có tool xem vùng gốc trên PDF. Kết quả test (30 câu, chạy một lần) **30/30**. Chi tiết ở [mục cuối](#thử-thách-nâng-cao) và [advanced/REPORT.md](../../advanced/REPORT.md).
 
 ## Dữ liệu và benchmark
 
@@ -251,7 +252,13 @@ Mọi thứ trong mục này được làm **sau** lần chạy test duy nhất,
 - **Tài liệu:** toàn bộ cuốn OpenStax *Principles of Microeconomics 3e* (595 trang, CC BY-NC-SA 4.0). Index trang 21–576 thành 2.194 unit: 1.829 đoạn text, 167 bảng, 198 hình. Hình được mô tả bằng Haiku vision với chi phí $0.10; mỗi unit giữ trang gốc và bbox.
 - **Agent:** `claude-haiku-5-5` với `search_document(query, content_type)` và **`view_region`**. Tool này render vùng gốc trên trang PDF để đọc lại con số trong bảng hoặc hình, thay vì tin mô tả AI hay text trích. Trên dev, nó là khác biệt duy nhất giữa các cấu hình: 18/18 so với 17/18 và 17/18.
 - **Benchmark:** dev 18 câu, test 30 câu (6 bảng, 5 sơ đồ, 5 biểu đồ, 4 multi-hop, 4 text, 6 thiếu evidence). Benchmark và quy tắc chọn được khóa trước khi chạy (`c200359`, `36f5d53`). Cấu hình được chọn trên dev (`bd6f3de`), và test chạy đúng một lần (`3690d62`).
-- **Test:** __ADV_TEST__ Chi phí $0.046 cho 30 câu; 0 lỗi hệ thống.
+- **Test:** **30/30 (100%)**, ngưỡng là 27/30. Theo nhóm: bảng 6/6, sơ đồ 5/5, biểu đồ 5/5, multi-hop 4/4, text 4/4, thiếu evidence 6/6. Chi phí $0.046 cho 30 câu; 0 lỗi hệ thống.
+- **Nhãn test:** LLM chấm nháp; học viên đối chiếu cả 30 câu với crop trang gốc, đồng ý 30/30, không sửa nhãn nào ([advanced/results/review/STUDENT_REVIEW.md](../../advanced/results/review/STUDENT_REVIEW.md)). Lần duyệt này không mù vì phiếu hiển thị nhãn nháp.
+- **Lỗi và giới hạn chính:**
+  - Trên dev, mô tả AI của hình không đủ tin cậy để trả lời con số (d07); đây là lý do thêm `view_region`.
+  - 3/30 câu test có thẻ thừa ở cuối câu trả lời (lỗi định dạng).
+  - Mỗi cấu hình chỉ chạy một lần, và người dựng hệ thống cũng là người soạn benchmark.
+  - Tổng chi phí phần nâng cao khoảng $0.21.
 
 ## Sử dụng AI
 

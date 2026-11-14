@@ -1,0 +1,265 @@
+{
+ "split": "test",
+ "config": "adv_hrr_view",
+ "pass": 30,
+ "n": 30,
+ "pass_rate": 1.0,
+ "by_group": {
+  "table": "6/6",
+  "diagram": "5/5",
+  "chart": "5/5",
+  "multihop": "4/4",
+  "text": "4/4",
+  "unanswerable": "6/6"
+ },
+ "errors": 0,
+ "student_labels": 30,
+ "student_changed_draft": 0,
+ "mean_s": 26.4,
+ "p_max_s": 43.3,
+ "cost_usd": 0.0456,
+ "mean_searches": 1.47,
+ "mean_views": 0.77,
+ "labels": {
+  "adv-t01": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "AFSCME 1.6 million is 4th by value (NEA 3.0, SEIU 2.0, AFT 1.7, AFSCME 1.6, IBT 1.4); agent explicitly notices the table prints IBT above AFSCME. Table 14.6 p.346 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t02": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "12.6% - 10.2% = 2.4 points; Table 15.1 p.371 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t03": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "$10,948 - $6,731 = $4,217; female life expectancy 80.2 (correct column, not male 75.5); Table 16.2 p.409 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t04": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "2000-2009: -1.00% total, -2.70% capital gains, 1.70% dividends; Table 17.2 p.430 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t05": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Sugar $826,000; $826,000 - $685,000 = $141,000; Table 20.2 p.490 viewed and cited. Extra ratio 1.21x is correct arithmetic.",
+   "student_note": ""
+  },
+  "adv-t06": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "$426.0 billion, 70.3% of $606.1 billion (Table 13.3 p.325); extra remark that the text says 'about 69%' is supported by cited p0325-t0.",
+   "student_note": ""
+  },
+  "adv-t07": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "B (Payment for Goods and Services) and C (Labor Services) point to Firms in Figure 1.7 p.29 (viewed); A and D correctly placed as firms-to-households.",
+   "student_note": ""
+  },
+  "adv-t08": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "$900 at 30 lb, ~$1,500 at 40 lb (point on the curve), reduce 30 lb with a $1,000 charge; Figure 12.3 p.297 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t09": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "In: premiums from customers, investment income; out: payments to customers, expenses, profits or losses (Figure 16.2 p.405, viewed). Caption paraphrase added is also correct.",
+   "student_note": ""
+  },
+  "adv-t10": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "No-trade price 12 cents (Brazil) and 24 cents (U.S.); Figure 20.2 p.484 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t11": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "All three 2-1 pairwise results and the cycle; Figure 18.2 p.453 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t12": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Fewest 2009 (716), most 2000 (4,926) from bar labels of Figure 11.2(a) p.273 (viewed); 1999 4,642 also correct.",
+   "student_note": ""
+  },
+  "adv-t13": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "$1,300 - $1,066 = $234; 3.5% vs 4.5%; Figure 6.6 p.163 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t14": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Most 2000-2009 at ~11.4 million (in tolerance); fewest 1930-1939. It calls the 1930s bar 'roughly 1 million' (the bar is ~0.7 million, below the 2,000,000 tick) - the size of the smallest bar was not asked; flagged for review.",
+   "student_note": "1930s bar is about 0.7M; agent says roughly 1M, but the question only asks which decade had the fewest."
+  },
+  "adv-t15": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "2019, ~665,000-670,000 filed (in tolerance); 2020 ~645,000 also matches the chart. Figure 13.4 p.324 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t16": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Female-to-male higher at ~79-80%, Black-to-white ~73-74% (both in tolerance); Figure 14.15 p.354 viewed and cited.",
+   "student_note": ""
+  },
+  "adv-t17": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "U.S. has comparative advantage in corn (1 h vs 4 h), opportunity cost 1/2 barrel of oil; Table 19.1 p.462 and Table 19.4 p.463 cited (19.4 viewed). Answer string ends with leaked '</answer><parameter ...>' markup (formatting glitch, no extra claim).",
+   "student_note": ""
+  },
+  "adv-t18": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Peak ~28-29% about 1955 (Figure 14.11 p.347, viewed; within 27-29 tolerance) and 11.1% U.S. union density 2012 (Table 14.8 p.351, viewed).",
+   "student_note": ""
+  },
+  "adv-t19": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "16.1% under-18 (Table 15.1 p.371, viewed) vs 11.4% overall in 2020; the 11.4% is cited to p0370-t1 ('in 2020 ... 37.2 million people living in poverty, representing 11.4%'), equivalent evidence to the Figure 15.2 caption. 16.1 - 11.4 = 4.7.",
+   "student_note": ""
+  },
+  "adv-t20": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "975,000 in 1985 (p0351-t0) and 408,000 in 2021 (Table 14.6 p.346, viewed); drop 567,000 (58%) correct; 390,000 by 2015 also in the text. Leaked closing markup in the answer string (formatting glitch).",
+   "student_note": ""
+  },
+  "adv-t21": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Japanese/European competition from the 1960s, fewer jobs and less bargaining power, public-sector unions still growing (p0350-t2, p0351-t0); union names AFSCME/SEIU/NEA are in cited p0350-t1. Leaked closing markup (formatting glitch).",
+   "student_note": ""
+  },
+  "adv-t22": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Archer Daniels Midland, $600 million a year; p0261-t1.",
+   "student_note": ""
+  },
+  "adv-t23": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Condition (government buys excess supply or pays others to), taxpayers and consumers pay, ~$1 billion per day; p0085-t3.",
+   "student_note": ""
+  },
+  "adv-t24": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "answered",
+   "llm_draft": "pass",
+   "reason": "Keep producing if price is above (minimum) average variable cost / shutdown point, shut down immediately below it; cited p0212-t0 and p0221-t3 state exactly this (equivalent to the listed gold passages).",
+   "student_note": ""
+  },
+  "adv-t25": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained after viewing Table 14.6; CWA not listed.",
+   "student_note": ""
+  },
+  "adv-t26": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; states data only through 2020, no 2021 rate claimed.",
+   "student_note": ""
+  },
+  "adv-t27": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; Figure 11.2(a) covers 1999-2012.",
+   "student_note": ""
+  },
+  "adv-t28": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained after viewing Table 16.2; Japan not listed.",
+   "student_note": ""
+  },
+  "adv-t29": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; Table 17.2 ends in 2021.",
+   "student_note": ""
+  },
+  "adv-t30": {
+   "label": "pass",
+   "labeled_by": "student",
+   "status": "abstain",
+   "llm_draft": "pass",
+   "reason": "Abstained; Figure 13.4 ends in 2020.",
+   "student_note": ""
+  }
+ }
+}

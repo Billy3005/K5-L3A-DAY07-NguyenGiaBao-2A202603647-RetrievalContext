@@ -8,12 +8,12 @@
 
 | | |
 |---|---|
-| **Test (30 câu, chạy 1 lần, cấu hình `adv_hrr_view`)** | **__TEST_SCORE__** · từ chối đúng 6/6 · lỗi hệ thống 0 |
-| Theo nhóm (test) | __TEST_GROUPS__ |
+| **Test (30 câu, chạy 1 lần, cấu hình `adv_hrr_view`)** | **30/30 = 100%** (ngưỡng 27/30) · từ chối đúng 6/6 · lỗi hệ thống 0 |
+| Theo nhóm (test) | bảng 6/6 · sơ đồ 5/5 · biểu đồ 5/5 · multi-hop 4/4 · text 4/4 · thiếu evidence 6/6 |
 | Dev (18 câu), 3 cấu hình agent | `adv_dense` 17/18 · `adv_hrr` 17/18 · `adv_hrr_view` **18/18** |
 | Chi phí toàn bộ phần nâng cao | ≈ **$0.21** (vision $0.101, dev $0.064, test $0.046, chạy thử $0.002) |
 | Thời gian test | trung vị 26,1 s/câu, tối đa 43,3 s (4 luồng song song, rerank trên CPU) |
-| Nhãn test | LLM chấm nháp từ trace và crop trang gốc; __STUDENT_REVIEW__ |
+| Nhãn test | LLM chấm nháp từ trace và crop trang gốc; học viên đối chiếu cả 30 câu với crop trang gốc, đồng ý 30/30, sửa 0 nhãn (không mù, xem §7) |
 
 Kết quả test và nhãn: [results/agent/test/adv_hrr_view.jsonl](results/agent/test/adv_hrr_view.jsonl) (trace đầy đủ), [results/agent/test/adv_hrr_view_score.json](results/agent/test/adv_hrr_view_score.json) (nhãn cuối cùng và lý do), [results/review/test_adv_hrr_view.md](results/review/test_adv_hrr_view.md) (phiếu duyệt có ảnh gốc), [results/review/test_adv_hrr_view_labels.csv](results/review/test_adv_hrr_view_labels.csv) (nhãn của học viên).
 
@@ -113,12 +113,28 @@ Quy tắc chọn được commit **trước** khi có kết quả dev (commit `3
 
 ## 7. Kết quả test (chạy một lần, commit `3690d62`)
 
-__TEST_TABLE__
+| Nhóm | Đạt | Ghi chú |
+|---|---|---|
+| Bảng | 6/6 | gồm xếp hạng theo giá trị (t01), chọn đúng cột nữ/nam (t03), các phép trừ (t02, t03, t05) |
+| Ảnh, sơ đồ | 5/5 | các chi tiết chỉ có trong hình: chiều mũi tên (t07), điểm $1,500 (t08), "profits or losses" (t09) |
+| Biểu đồ | 5/5 | 2 biểu đồ có nhãn số và 3 biểu đồ đọc theo trục, đều trong dung sai |
+| Multi-hop | 4/4 | 2 bảng (t17), biểu đồ + bảng (t18), bảng + đoạn text (t19, t20) |
+| Text | 4/4 | |
+| Thiếu evidence | 6/6 | từ chối, không đưa số cho năm hoặc đối tượng ngoài phạm vi |
+| **Tổng** | **30/30 (100%)** | lỗi hệ thống 0, trung vị 26,1 s/câu, $0.0456 |
+
+Nguồn: [results/agent/test/adv_hrr_view_score.json](results/agent/test/adv_hrr_view_score.json).
 
 - Agent trả lời 24/24 câu có đáp án và từ chối 6/6 câu thiếu evidence.
 - Có 44 lượt search và 23 lượt `view_region`; agent mở ảnh gốc ở mọi câu bảng, sơ đồ và biểu đồ.
 - 0 lỗi hệ thống, $0.0456 cho 30 câu.
-- **Nhãn:** Claude Code chấm nháp bằng cách đọc từng trace và mở từng unit được trích cùng vùng gold trên trang gốc. Phiếu duyệt có ảnh crop: [results/review/test_adv_hrr_view.md](results/review/test_adv_hrr_view.md). __STUDENT_REVIEW_DETAIL__
+- **Nhãn:** Claude Code chấm nháp bằng cách đọc từng trace và mở từng unit được trích cùng vùng gold trên trang gốc. Phiếu duyệt có ảnh crop: [results/review/test_adv_hrr_view.md](results/review/test_adv_hrr_view.md).
+- **Học viên duyệt** ([results/review/STUDENT_REVIEW.md](results/review/STUDENT_REVIEW.md)):
+  - Học viên đối chiếu cả 30 câu với crop trang gốc và điền `student_label` cho đủ 30 dòng. Kết quả: 30 pass, 0 fail, không sửa nhãn nháp nào.
+  - Ghi chú ở t14: cột thập niên 1930 khoảng 0,7 triệu, agent nói khoảng 1 triệu, nhưng câu hỏi chỉ hỏi thập niên nào.
+  - Thẻ thừa ở t17, t20, t21 được coi là lỗi định dạng.
+  - **Giới hạn:** lần duyệt này **không mù**, vì phiếu hiển thị nhãn và lý do nháp cạnh mỗi câu, nên mức đồng thuận có thể bị nâng lên do thiên lệch tự động hóa. Phần đóng góp của nó là việc người đọc kiểm tra từng câu trên ảnh gốc.
+  - Điểm cuối tính bằng `python -m advanced.review score`; nhãn học viên ghi đè nhãn nháp.
 
 ## 8. Phân tích lỗi và điểm yếu (kể cả các câu vẫn đạt)
 
