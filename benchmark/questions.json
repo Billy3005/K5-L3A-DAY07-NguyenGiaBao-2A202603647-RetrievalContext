@@ -1,0 +1,1182 @@
+[
+ {
+  "id": "q01",
+  "split": "dev",
+  "type": "direct",
+  "section": "3.1",
+  "origin": "day6:dev",
+  "question": "In the gasoline market example, at what price and quantity do the demand and supply curves intersect?",
+  "answerable": true,
+  "expected_answer": "At a price of $1.40 per gallon and a quantity of 600 (million gallons).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 64,
+     "evidence": "equilibrium point E, with a price of $1.40 and a quantity of 600"
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 64,
+    "evidence": "equilibrium point E, with a price of $1.40 and a quantity of 600"
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q02",
+  "split": "dev",
+  "type": "paraphrase",
+  "section": "3.1",
+  "origin": "day6:dev",
+  "question": "Why do economists say that the word 'demand' does not mean the same thing as the amount people want to buy at one particular price?",
+  "answerable": true,
+  "expected_answer": "Demand is the whole relationship between a range of prices and quantities (the curve/schedule); quantity demanded is one specific point on that curve.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 62,
+     "evidence": "In short, demand refers to the curve and quantity demanded refers to a (specific) point on the curve."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 62,
+    "evidence": "In short, demand refers to the curve and quantity demanded refers to a (specific) point on the curve."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q03",
+  "split": "dev",
+  "type": "conditional",
+  "section": "3.2",
+  "origin": "day6:dev",
+  "question": "How should we analyze demand when price and income change at the same time?",
+  "answerable": true,
+  "expected_answer": "Under ceteris paribus, examine the changes one at a time while holding the other factors constant, then combine the results.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 67,
+     "evidence": "The answer is that we examine the changes one at a time, assuming the other factors are held constant."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 67,
+    "evidence": "The answer is that we examine the changes one at a time, assuming the other factors are held constant."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q04",
+  "split": "dev",
+  "type": "paraphrase",
+  "section": "3.2",
+  "origin": "day6:dev",
+  "question": "If a good becomes more expensive, does its demand curve move to a new position?",
+  "answerable": true,
+  "expected_answer": "No. A change in the good's own price causes a movement along the existing demand curve (a change in quantity demanded), not a shift of the curve.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 71,
+     "evidence": "A change in the price of a good or service causes a movement along a specific demand curve, and it typically leads to some change in the quantity demanded, but it does not shift the demand curve."
+    },
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 82,
+     "evidence": "Remember, a change in the price of a good never causes the demand or supply curve for that good to shift."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 71,
+    "evidence": "A change in the price of a good or service causes a movement along a specific demand curve, and it typically leads to some change in the quantity demanded, but it does not shift the demand curve."
+   },
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 82,
+    "evidence": "Remember, a change in the price of a good never causes the demand or supply curve for that good to shift."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q05",
+  "split": "dev",
+  "type": "filter",
+  "section": "3.3",
+  "origin": "day6:dev",
+  "question": "In the four-step process, what do you decide in Step 2?",
+  "answerable": true,
+  "expected_answer": "Whether the economic change being analyzed affects demand or supply.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 76,
+     "evidence": "Step 2. Decide whether the economic change you are analyzing affects demand or supply."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 76,
+    "evidence": "Step 2. Decide whether the economic change you are analyzing affects demand or supply."
+   }
+  ],
+  "filter": {
+   "chapter": 3
+  }
+ },
+ {
+  "id": "q06",
+  "split": "dev",
+  "type": "direct",
+  "section": "3.5",
+  "origin": "day6:dev",
+  "question": "What is social surplus and what are its other names?",
+  "answerable": true,
+  "expected_answer": "The sum of consumer surplus and producer surplus; also called economic surplus or total surplus.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 87,
+     "evidence": "The sum of consumer surplus and producer surplus is social surplus, also referred to as economic surplus or total surplus."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 87,
+    "evidence": "The sum of consumer surplus and producer surplus is social surplus, also referred to as economic surplus or total surplus."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q07",
+  "split": "dev",
+  "type": "conditional",
+  "section": "3.5",
+  "origin": "day6:dev",
+  "question": "Apart from causing inefficiency, what other effect do price floors and price ceilings have on surplus?",
+  "answerable": true,
+  "expected_answer": "They transfer some consumer surplus to producers, or some producer surplus to consumers.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 87,
+     "evidence": "Along with creating inefficiency, price floors and ceilings will also transfer some consumer surplus to producers, or some producer surplus to consumers."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 87,
+    "evidence": "Along with creating inefficiency, price floors and ceilings will also transfer some consumer surplus to producers, or some producer surplus to consumers."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q08",
+  "split": "dev",
+  "type": "direct",
+  "section": "4.1",
+  "origin": "day6:dev",
+  "question": "What are the equilibrium salary and the equilibrium number of nurses in the Minneapolis-St. Paul-Bloomington example?",
+  "answerable": true,
+  "expected_answer": "An equilibrium salary of $85,000 per year and 41,000 nurses.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 100,
+     "evidence": "The equilibrium quantity of nurses in the Minneapolis-St. Paul-Bloomington area is 41,000, and the equilibrium salary is $85,000 per year."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 100,
+    "evidence": "The equilibrium quantity of nurses in the Minneapolis-St. Paul-Bloomington area is 41,000, and the equilibrium salary is $85,000 per year."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q09",
+  "split": "dev",
+  "type": "filter",
+  "section": "4.1",
+  "origin": "day6:dev",
+  "question": "What happens when a price floor is set above the equilibrium price?",
+  "answerable": true,
+  "expected_answer": "In the living-wage example, quantity of labor supplied (1,600) exceeds quantity demanded (700), so a surplus of labor exists.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 104,
+     "evidence": "At the price floor, the quantity supplied exceeds the quantity demanded, and a surplus of labor exists in this market."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 104,
+    "evidence": "At the price floor, the quantity supplied exceeds the quantity demanded, and a surplus of labor exists in this market."
+   }
+  ],
+  "filter": {
+   "chapter": 4
+  }
+ },
+ {
+  "id": "q10",
+  "split": "dev",
+  "type": "conditional",
+  "section": "4.1",
+  "origin": "day6:dev",
+  "question": "Will a small increase in the minimum wage reduce employment if the minimum wage stays below the equilibrium wage?",
+  "answerable": true,
+  "expected_answer": "No. While it remains below the equilibrium wage the floor is nonbinding and has no effect on the quantity of employment.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 105,
+     "evidence": "Even if the minimum wage moves just a little higher, it will still have no effect on the quantity of employment in the economy, as long as it remains below the equilibrium wage."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 105,
+    "evidence": "Even if the minimum wage moves just a little higher, it will still have no effect on the quantity of employment in the economy, as long as it remains below the equilibrium wage."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q11",
+  "split": "dev",
+  "type": "paraphrase",
+  "section": "4.3",
+  "origin": "day6:dev",
+  "question": "Why does the book say that people who want price controls are acting like someone who punishes the bearer of bad news?",
+  "answerable": true,
+  "expected_answer": "Price controls try to stifle the message that prices send about the equilibrium of demand and supply, but they do not change the underlying forces (\"kill the messenger\").",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 113,
+     "evidence": "Those who seek price controls are trying to kill the messenger-or at least to stifle an unwelcome message that prices are bringing about the equilibrium level of price and quantity."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 113,
+    "evidence": "Those who seek price controls are trying to kill the messenger-or at least to stifle an unwelcome message that prices are bringing about the equilibrium level of price and quantity."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q12",
+  "split": "dev",
+  "type": "direct",
+  "section": "14.1",
+  "origin": "day6:dev",
+  "question": "What is the first rule of labor markets?",
+  "answerable": true,
+  "expected_answer": "A profit-maximizing firm will never pay a worker more (wages and benefits) than the value of that worker's marginal productivity to the firm.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 336,
+     "evidence": "If a firm wants to maximize profits, it will never pay more (in terms of wages and benefits) for a worker than the value of their marginal productivity to the firm."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 336,
+    "evidence": "If a firm wants to maximize profits, it will never pay more (in terms of wages and benefits) for a worker than the value of their marginal productivity to the firm."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q13",
+  "split": "dev",
+  "type": "filter",
+  "section": "14.1",
+  "origin": "day6:dev",
+  "question": "How does an increase in demand for a firm's product change the firm's demand for labor?",
+  "answerable": true,
+  "expected_answer": "It raises the product's price, which raises the value of labor's marginal product (MPL x P), so the firm's demand for labor increases (derived demand).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 339,
+     "evidence": "An increase in demand for the firm's product drives up the product's price, which increases the firm's demand for labor."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 339,
+    "evidence": "An increase in demand for the firm's product drives up the product's price, which increases the firm's demand for labor."
+   }
+  ],
+  "filter": {
+   "chapter": 14
+  }
+ },
+ {
+  "id": "q14",
+  "split": "dev",
+  "type": "paraphrase",
+  "section": "14.2",
+  "origin": "day6:dev",
+  "question": "When a single employer dominates hiring in a town, how do employment and pay compare with a competitive labor market?",
+  "answerable": true,
+  "expected_answer": "A monopsony hires fewer workers and pays a lower wage than a competitive labor market.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 345,
+     "evidence": "In other words, under monopsony employers hire fewer workers and pay a lower wage."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 345,
+    "evidence": "In other words, under monopsony employers hire fewer workers and pay a lower wage."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q15",
+  "split": "dev",
+  "type": "conditional",
+  "section": "14.4",
+  "origin": "day6:dev",
+  "question": "In a bilateral monopoly, what determines whether the wage ends up nearer the union's preferred wage or the monopsonist's?",
+  "answerable": true,
+  "expected_answer": "Relative bargaining power: closer to the union wage Wu if the union is stronger, closer to Wm if the monopsonist is stronger.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 353,
+     "evidence": "it will be closer to Wu if the union has more power and closer to Wm if the monopsonist has more power."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 353,
+    "evidence": "it will be closer to Wu if the union has more power and closer to Wm if the monopsonist has more power."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q16",
+  "split": "dev",
+  "type": "direct",
+  "section": "14.6",
+  "origin": "day6:dev",
+  "question": "How large is the effect of low-skill immigration on the wages of low-skill workers?",
+  "answerable": true,
+  "expected_answer": "Not large - perhaps a decline of about 1%.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 361,
+     "evidence": "The effects on wages of low-skill workers are not large-perhaps in the range of decline of about 1%."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 361,
+    "evidence": "The effects on wages of low-skill workers are not large-perhaps in the range of decline of about 1%."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q17",
+  "split": "dev",
+  "type": "direct",
+  "section": "3.4",
+  "origin": "day6:test",
+  "question": "Under the rent control example, if demand rises but rent is held at $500, how many units are supplied and demanded?",
+  "answerable": true,
+  "expected_answer": "Quantity supplied stays at 15,000 units while quantity demanded is 19,000 units, creating a shortage.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 84,
+     "evidence": "At that price ($500), the quantity supplied remains at the same 15,000 rental units, but the quantity demanded is 19,000 rental units."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 84,
+    "evidence": "At that price ($500), the quantity supplied remains at the same 15,000 rental units, but the quantity demanded is 19,000 rental units."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q18",
+  "split": "dev",
+  "type": "filter",
+  "section": "3.4",
+  "origin": "day6:test",
+  "question": "What is the result when government policy keeps a price above the level the market would otherwise reach?",
+  "answerable": true,
+  "expected_answer": "Quantity supplied exceeds quantity demanded, so a surplus exists (e.g., European wheat price supports).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 85,
+     "evidence": "The result is a quantity supplied in excess of the quantity demanded (Qd). When quantity supplied exceeds quantity demanded, a surplus exists."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 85,
+    "evidence": "The result is a quantity supplied in excess of the quantity demanded (Qd). When quantity supplied exceeds quantity demanded, a surplus exists."
+   }
+  ],
+  "filter": {
+   "chapter": 3
+  }
+ },
+ {
+  "id": "q19",
+  "split": "dev",
+  "type": "filter",
+  "section": "4.2",
+  "origin": "day6:test",
+  "question": "What happens when a price ceiling is set below the equilibrium price?",
+  "answerable": true,
+  "expected_answer": "In the credit card example, quantity demanded exceeds quantity supplied at the ceiling rate Rc, so there is a credit shortage and some willing borrowers cannot get cards.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 111,
+     "evidence": "At the price ceiling (Rc), quantity demanded will exceed quantity supplied."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 111,
+    "evidence": "At the price ceiling (Rc), quantity demanded will exceed quantity supplied."
+   }
+  ],
+  "filter": {
+   "chapter": 4
+  }
+ },
+ {
+  "id": "q20",
+  "split": "dev",
+  "type": "conditional",
+  "section": "4.2",
+  "origin": "day6:test",
+  "question": "Does a legal cap on interest rates matter if it is set well above the market interest rate?",
+  "answerable": true,
+  "expected_answer": "No. A ceiling set at a relatively high level is nonbinding and has no practical effect unless the equilibrium rate rises above it.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 112,
+     "evidence": "A price ceiling that is set at a relatively high level is nonbinding, and it will have no practical effect unless the equilibrium price soars high enough to exceed the price ceiling."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 112,
+    "evidence": "A price ceiling that is set at a relatively high level is nonbinding, and it will have no practical effect unless the equilibrium price soars high enough to exceed the price ceiling."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q21",
+  "split": "dev",
+  "type": "paraphrase",
+  "section": "14.3",
+  "origin": "day6:test",
+  "question": "If organized workers bargain the wage above the market-clearing level, what happens to how many workers firms hire?",
+  "answerable": true,
+  "expected_answer": "Firms hire less labor than at the equilibrium wage (Qd < Qe), and there is an excess supply of workers wanting those jobs.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 348,
+     "evidence": "At the higher union wage Wu, the firms in this industry will hire less labor than they would have hired in equilibrium."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 348,
+    "evidence": "At the higher union wage Wu, the firms in this industry will hire less labor than they would have hired in equilibrium."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "q22",
+  "split": "dev",
+  "type": "direct",
+  "section": "14.5",
+  "origin": "day6:test",
+  "question": "According to Gary Becker, how do competitive markets affect discrimination by employers?",
+  "answerable": true,
+  "expected_answer": "Competitive markets can allow some employers to discriminate, but they also give profit-seeking firms incentives not to discriminate.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 357,
+     "evidence": "Becker pointed out that while competitive markets can allow some employers to practice discrimination, it can also provide profit-seeking firms with incentives not to discriminate."
+    }
+   ]
+  ],
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 357,
+    "evidence": "Becker pointed out that while competitive markets can allow some employers to practice discrimination, it can also provide profit-seeking firms with incentives not to discriminate."
+   }
+  ],
+  "filter": null
+ },
+ {
+  "id": "m01",
+  "split": "dev",
+  "type": "multi_hop",
+  "section": "3.5",
+  "question": "In the tablet computer market example, what is the equilibrium price, and what do economists call the extra benefit sellers get from receiving that price instead of the lower price they would have accepted?",
+  "expected_answer": "The equilibrium price is $80 (quantity 28 million); the extra benefit to sellers is producer surplus (price received minus the price they would have been willing to accept).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 86,
+     "evidence": "The equilibrium price is $80 and the equilibrium quantity is 28 million."
+    }
+   ],
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 87,
+     "evidence": "The extra benefit producers receive from selling a good or service, measured by the price the producer actually received minus the price the producer would have been willing to accept is called producer surplus."
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 86,
+    "evidence": "The equilibrium price is $80 and the equilibrium quantity is 28 million."
+   }
+  ]
+ },
+ {
+  "id": "m02",
+  "split": "dev",
+  "type": "multi_hop",
+  "section": "14.3",
+  "question": "Roughly how much more do union members earn than comparable nonunion workers, and what is the downside for employment when a union pushes the wage above the market-clearing level?",
+  "expected_answer": "Union members earn about 20% more than nonunion workers; at the higher union wage firms hire less labor than at the competitive equilibrium.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 346,
+     "evidence": "their members earn about 20% more than nonunion workers"
+    }
+   ],
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 348,
+     "evidence": "At the higher union wage Wu, the firms in this industry will hire less labor than they would have hired in equilibrium"
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 346,
+    "evidence": "their members earn about 20% more than nonunion workers"
+   }
+  ]
+ },
+ {
+  "id": "ud1",
+  "split": "dev",
+  "type": "unanswerable",
+  "section": "3.x",
+  "question": "What price elasticity of demand for gasoline does the chapter report?",
+  "absence_reason": "Elasticity is covered in Chapter 5, which is not in the corpus. The gasoline example (p62-65) gives a demand schedule but never an elasticity value.",
+  "absence_check": {
+   "keywords": [
+    "elasticity",
+    "elastic"
+   ],
+   "note": "0 matches in all 78 pages"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ud2",
+  "split": "dev",
+  "type": "unanswerable",
+  "section": "4.2",
+  "question": "What maximum interest rate does Arkansas's usury law allow lenders to charge?",
+  "absence_reason": "p111-112 discuss usury laws in general and a hypothetical 30% cap; no state, including Arkansas, is named with a specific cap.",
+  "absence_check": {
+   "keywords": [
+    "Arkansas"
+   ],
+   "note": "0 matches; 'usury' appears only on p106, p111, p112 without state-specific caps"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ud3",
+  "split": "dev",
+  "type": "unanswerable",
+  "section": "14.6",
+  "question": "How many H1B visas does the United States issue each year?",
+  "absence_reason": "p362 mentions the H1B program and calls for more highly skilled workers, but gives no annual number of visas.",
+  "absence_check": {
+   "keywords": [
+    "H1B",
+    "H-1B",
+    "visas per year"
+   ],
+   "note": "H1B appears twice on p362, never with a count"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ud4",
+  "split": "dev",
+  "type": "unanswerable",
+  "section": "4.1/14.3",
+  "question": "What percentage of registered nurses in the Minneapolis-St. Paul area belong to a labor union?",
+  "absence_reason": "The nurse example (p98-100, p115) covers salaries and quantities only; union statistics (p346) are by sector, sex, race and age, never for nurses or Minneapolis.",
+  "absence_check": {
+   "keywords": [
+    "nurses union",
+    "nurse union",
+    "union nurses"
+   ],
+   "note": "0 matches; 'Minneapolis' appears only on nurse-market pages without union data"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "t01",
+  "split": "test",
+  "type": "direct",
+  "section": "3.3",
+  "question": "When good weather boosted the supply of California salmon, what happened to the equilibrium price and quantity?",
+  "expected_answer": "The equilibrium price fell from $3.25 to $2.50 per pound and the equilibrium quantity rose from 250,000 to 550,000 salmon.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 78,
+     "evidence": "the equilibrium price falls from $3.25 to $2.50, but the equilibrium quantity increases from 250,000 to 550,000 salmon"
+    }
+   ]
+  ],
+  "filter": null,
+  "notes": "Table 3.6 (p77) contains the numbers but only as raw rows; it is partial evidence (needs table reading) and is not counted as a hit.",
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 78,
+    "evidence": "the equilibrium price falls from $3.25 to $2.50, but the equilibrium quantity increases from 250,000 to 550,000 salmon"
+   }
+  ]
+ },
+ {
+  "id": "t02",
+  "split": "test",
+  "type": "paraphrase",
+  "section": "4.1",
+  "question": "How does a job that demands many years of schooling affect how many workers are available for it, and what examples does the book give?",
+  "expected_answer": "The more required education, the lower the labor supply; e.g., fewer PhD mathematicians than high school math teachers, fewer cardiologists than primary care physicians, fewer physicians than nurses.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 102,
+     "evidence": "The more required education, the lower the supply."
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 102,
+    "evidence": "The more required education, the lower the supply."
+   }
+  ]
+ },
+ {
+  "id": "t03",
+  "split": "test",
+  "type": "paraphrase",
+  "section": "3.2",
+  "question": "What is the name for a product that people buy less of after their earnings go up?",
+  "expected_answer": "An inferior good: its demand falls when income rises (the demand curve shifts left).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 69,
+     "evidence": "A product whose demand falls when income rises, and vice versa, is called an inferior good."
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 69,
+    "evidence": "A product whose demand falls when income rises, and vice versa, is called an inferior good."
+   }
+  ]
+ },
+ {
+  "id": "t04",
+  "split": "test",
+  "type": "direct",
+  "section": "3.5",
+  "question": "In the movie theater example, what price floor does the city set and how many people attend movies afterwards?",
+  "expected_answer": "A price floor of $12 per ticket; attendance (quantity demanded) falls from 1,800 to 1,400.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 88,
+     "evidence": "it decides to impose a price floor of $12 per ticket. As a result, the quantity demanded of movie tickets falls to 1,400."
+    },
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 88,
+     "evidence": "A price floor is imposed at $12, which means that quantity demanded falls to 1,400."
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 88,
+    "evidence": "it decides to impose a price floor of $12 per ticket. As a result, the quantity demanded of movie tickets falls to 1,400."
+   },
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 88,
+    "evidence": "A price floor is imposed at $12, which means that quantity demanded falls to 1,400."
+   }
+  ]
+ },
+ {
+  "id": "t05",
+  "split": "test",
+  "type": "conditional",
+  "section": "14.2",
+  "question": "For the monopsony wage schedule in Table 14.5, what is the marginal cost of labor when the firm goes from three to four workers, and why is it higher than the wage?",
+  "expected_answer": "$7 (wage $4 per hour, total cost rises from $9 to $16); it exceeds the wage because hiring one more worker requires raising the wage for all previous hires too.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 344,
+     "evidence": "Marginal Cost of Labor $1 $3 $5 $7 $9"
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 344,
+    "evidence": "Marginal Cost of Labor $1 $3 $5 $7 $9"
+   }
+  ]
+ },
+ {
+  "id": "t06",
+  "split": "test",
+  "type": "paraphrase",
+  "section": "14.3",
+  "question": "What explanations have economists offered for why a much smaller share of American workers are in labor organizations than in the 1950s?",
+  "expected_answer": "Four: the shift from manufacturing to services; globalization and foreign competition; less desire for unions because of workplace protection laws; a U.S. legal environment that makes organizing harder.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 350,
+     "evidence": "The shift from manufacturing to service industries • The force of globalization and increased competition from foreign producers • A reduced desire for unions because of the workplace protection laws now in place"
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 350,
+    "evidence": "The shift from manufacturing to service industries • The force of globalization and increased competition from foreign producers • A reduced desire for unions because of the workplace protection laws now in place"
+   }
+  ]
+ },
+ {
+  "id": "t07",
+  "split": "test",
+  "type": "filter",
+  "section": "14.2",
+  "question": "Which law set up the minimum wage and the overtime pay rule?",
+  "expected_answer": "The Fair Labor Standards Act of 1938 (also limits child labor; overtime for hourly jobs beyond 40 hours per week).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 342,
+     "evidence": "Fair Labor Standards Act of 1938 Establishes the minimum wage, limits on child labor, and rules requiring payment of overtime pay"
+    }
+   ]
+  ],
+  "filter": {
+   "chapter": 14
+  },
+  "filter_note": "User context: the learner is studying Chapter 14. Cross-chapter distractor expected before running: Ch4 p104-106 discuss the minimum wage at length but never name the law.",
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 342,
+    "evidence": "Fair Labor Standards Act of 1938 Establishes the minimum wage, limits on child labor, and rules requiring payment of overtime pay"
+   }
+  ]
+ },
+ {
+  "id": "t08",
+  "split": "test",
+  "type": "filter",
+  "section": "3.1",
+  "question": "What happens in a market when the price sits below the equilibrium level?",
+  "expected_answer": "Excess demand (a shortage): quantity demanded exceeds quantity supplied (gasoline buyers mob stations, stations run short), and the price rises toward equilibrium.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 66,
+     "evidence": "When the price is below equilibrium, there is excess demand, or a shortage"
+    },
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 64,
+     "evidence": "At a price below equilibrium such as $1.20, quantity demanded exceeds quantity supplied, so there is excess demand."
+    }
+   ]
+  ],
+  "filter": {
+   "chapter": 3
+  },
+  "filter_note": "User context: the learner is studying Chapter 3. Cross-chapter distractors expected before running: Ch4 p99 (nurses below-equilibrium salary) and p108 (credit card rate below equilibrium).",
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 66,
+    "evidence": "When the price is below equilibrium, there is excess demand, or a shortage"
+   },
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 64,
+    "evidence": "At a price below equilibrium such as $1.20, quantity demanded exceeds quantity supplied, so there is excess demand."
+   }
+  ]
+ },
+ {
+  "id": "t09",
+  "split": "test",
+  "type": "multi_hop",
+  "section": "14.2+14.3",
+  "question": "What does the Fair Labor Standards Act require, and how could laws like it help explain the decline in union membership?",
+  "expected_answer": "It establishes the minimum wage, limits child labor and requires overtime pay; such workplace protection laws reduce workers' desire for unions, one explanation for declining membership.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 342,
+     "evidence": "Fair Labor Standards Act of 1938 Establishes the minimum wage, limits on child labor, and rules requiring payment of overtime pay"
+    }
+   ],
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 350,
+     "evidence": "A reduced desire for unions because of the workplace protection laws now in place"
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 342,
+    "evidence": "Fair Labor Standards Act of 1938 Establishes the minimum wage, limits on child labor, and rules requiring payment of overtime pay"
+   }
+  ]
+ },
+ {
+  "id": "t10",
+  "split": "test",
+  "type": "multi_hop",
+  "section": "14.5+14.6",
+  "question": "What share of bachelor's degrees did women earn in the 2018-19 academic year, and how much more does a bachelor's degree holder earn over a career than a typical high school graduate?",
+  "expected_answer": "Women earned 57% of bachelor's degrees; bachelor's holders earn about $2.8 million over their careers, $1.2 million more than the median high-school-diploma worker.",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 355,
+     "evidence": "As of the 2018-19 academic year, women earned 57% of bachelor's degrees."
+    }
+   ],
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 362,
+     "evidence": "adults with a bachelor's degree earn an average of $2.8 million during their careers, $1.2 million more than the median for workers with a high school diploma"
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 355,
+    "evidence": "As of the 2018-19 academic year, women earned 57% of bachelor's degrees."
+   }
+  ]
+ },
+ {
+  "id": "t11",
+  "split": "test",
+  "type": "conditional",
+  "section": "4.2",
+  "question": "In the credit card market example, if the interest rate is 13%, how large is the gap between the funds borrowers want and the funds lenders offer?",
+  "expected_answer": "Borrowers demand $700 billion but lenders supply only $510 billion: a shortage of $190 billion (the rate tends to rise toward the 15% equilibrium).",
+  "evidence_groups": [
+   [
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 108,
+     "evidence": "At an interest rate of 13%, the quantity of funds credit card borrowers demand increases to $700 billion, but the quantity credit card firms are willing to supply is only $510 billion."
+    },
+    {
+     "source_id": "openstax-micro-3e",
+     "page": 107,
+     "evidence": "At a below-equilibrium interest rate like 13%, the quantity of financial capital demanded would increase to $700 billion, but the quantity of financial capital supplied would decrease to $510 billion."
+    }
+   ]
+  ],
+  "filter": null,
+  "origin": "day7",
+  "answerable": true,
+  "gold": [
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 108,
+    "evidence": "At an interest rate of 13%, the quantity of funds credit card borrowers demand increases to $700 billion, but the quantity credit card firms are willing to supply is only $510 billion."
+   },
+   {
+    "source_id": "openstax-micro-3e",
+    "page": 107,
+    "evidence": "At a below-equilibrium interest rate like 13%, the quantity of financial capital demanded would increase to $700 billion, but the quantity of financial capital supplied would decrease to $510 billion."
+   }
+  ]
+ },
+ {
+  "id": "ut1",
+  "split": "test",
+  "type": "unanswerable",
+  "section": "3.2",
+  "question": "By what percentage did demand for laptops fall when tablet computers became cheaper?",
+  "absence_reason": "p69 says only that laptop demand decreased (leftward shift); no percentage or quantity is given.",
+  "absence_check": {
+   "keywords": [
+    "laptop"
+   ],
+   "note": "2 matches, both on p69, no number"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ut2",
+  "split": "test",
+  "type": "unanswerable",
+  "section": "14.3",
+  "question": "How large is the union wage premium in Canada according to the chapter?",
+  "absence_reason": "Canada is mentioned for union formation rules (p352) and immigration (p362), never for union wages.",
+  "absence_check": {
+   "keywords": [
+    "Canada"
+   ],
+   "note": "4 matches (p352 x3, p362) none about wages"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ut3",
+  "split": "test",
+  "type": "unanswerable",
+  "section": "14.3",
+  "question": "How many members did the United Auto Workers have in 1960?",
+  "absence_reason": "p351 gives UAW membership only for 1985 (975,000) and 2015 (about 390,000); p346 gives 408,000 for 2021. No 1960 figure.",
+  "absence_check": {
+   "keywords": [
+    "United Auto Workers",
+    "UAW"
+   ],
+   "note": "UAW figures only for 1985, 2015, 2021"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ },
+ {
+  "id": "ut4",
+  "split": "test",
+  "type": "unanswerable",
+  "section": "14.6",
+  "question": "What is the unemployment rate of U.S. college graduates according to the chapter?",
+  "absence_reason": "p362 only says college graduates have 'a significantly lower unemployment rate'; no rate is given anywhere in the corpus.",
+  "absence_check": {
+   "keywords": [
+    "unemployment rate"
+   ],
+   "note": "1 match (p362), no number"
+  },
+  "origin": "day7",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "filter": null
+ }
+]
