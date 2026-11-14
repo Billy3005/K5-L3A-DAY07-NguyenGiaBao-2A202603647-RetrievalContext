@@ -1,0 +1,292 @@
+[
+ {
+  "query_id": "q01",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q02",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q03",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2 although strict context_evidence=False: cited p112-005 says 'economists isolate each change and analyze it independently', equivalent to the gold 'examine the changes one at a time'. First answer was rejected by the validator ([id1, id2] format) and fixed on retry."
+ },
+ {
+  "query_id": "q04",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q05",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: cites p80 Step 2 of the postal example ('Did the change described affect supply or demand?'), equivalent to gold p76; respects chapter-3 filter."
+ },
+ {
+  "query_id": "q06",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q07",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q08",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q09",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: generic question; answer gives surplus + the living-wage numbers from p104-004 (1,600 supplied vs 700 demanded), which is the gold example (figure caption instead of body sentence)."
+ },
+ {
+  "query_id": "q10",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q11",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q12",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q13",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q14",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q15",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q16",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q17",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q18",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q19",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q20",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q21",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "q22",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Grade 2: core Becker claim from p357-005; the agent explicitly noted the passage is cut off and did not complete it."
+ },
+ {
+  "query_id": "m01",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "m02",
+  "status": "answered",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [
+   true,
+   true
+  ],
+  "answer_grade": 2,
+  "reason": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to."
+ },
+ {
+  "query_id": "ud1",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+ },
+ {
+  "query_id": "ud2",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+ },
+ {
+  "query_id": "ud3",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+ },
+ {
+  "query_id": "ud4",
+  "status": "abstain",
+  "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+  "citation_support": [],
+  "abstention_correct": true,
+  "reason": "Called abstain; reason names the missing fact and adds no unsupported claim."
+ }
+]

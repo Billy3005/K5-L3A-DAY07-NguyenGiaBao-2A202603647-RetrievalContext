@@ -1,0 +1,18 @@
+[
+  {
+    "index": "B",
+    "chunks": 326,
+    "embedding_model": "intfloat/multilingual-e5-base",
+    "dim": 768,
+    "index_version_sha256": "f2b46bc0d0e5fb39d7fa9465b275d9b7e6bcb37378dffeb08aab8f677bda7881",
+    "file": "chunks_B.jsonl"
+  },
+  {
+    "index": "B500",
+    "chunks": 628,
+    "embedding_model": "intfloat/multilingual-e5-base",
+    "dim": 768,
+    "index_version_sha256": "7a0fdfa254fc52e7fbf7b9bdc60fcecda255fe5a7500ea6ebc80077ebcf555aa",
+    "file": "chunks_B500.jsonl"
+  }
+]

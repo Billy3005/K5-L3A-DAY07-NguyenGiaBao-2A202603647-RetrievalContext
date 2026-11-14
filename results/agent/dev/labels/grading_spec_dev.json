@@ -1,0 +1,36 @@
+{
+ "label_source": "LLM-assisted draft: Claude Code (Opus 5.5) read every trace (answer, each cited chunk's full text) against gold evidence on 2026-11-14; student review recorded in labels/REVIEW.md",
+ "default_reason": {
+  "answerable": "Correct and complete vs expected answer; every cited chunk read in full and supports the sentence it is attached to.",
+  "unanswerable": "Called abstain; reason names the missing fact and adds no unsupported claim."
+ },
+ "configs": {
+  "agent_dense_B": {
+   "q03": {"reason": "Grade 2 although strict context_evidence=False: cited p112-005 says 'economists isolate each change and analyze it independently', equivalent to the gold 'examine the changes one at a time'. First answer was rejected by the validator ([id1, id2] format) and fixed on retry."},
+   "q05": {"reason": "Grade 2: cites p80 Step 2 of the postal example ('Did the change described affect supply or demand?'), equivalent to gold p76; respects chapter-3 filter."},
+   "q09": {"reason": "Grade 2: generic question; answer gives surplus + the living-wage numbers from p104-004 (1,600 supplied vs 700 demanded), which is the gold example (figure caption instead of body sentence)."},
+   "q22": {"reason": "Grade 2: core Becker claim from p357-005; the agent explicitly noted the passage is cut off and did not complete it."}
+  },
+  "agent_hrr_B": {
+   "q22": {"grade": 1, "unsupported_citation_idx": [0],
+           "reason": "Grade 1: first sentence correct (p357-005). Second sentence claims bigoted firms' refusal lets 'those firms gain an advantage by hiring them'; p357-005 is cut off at 'refuse to pay women and/or minorities a' so the claim is NOT in context (model completed a truncated chunk from prior knowledge, and the subject is wrong: competitors gain, not the bigoted firms). Citation list is deduplicated [p357-005, p358-002]: p357-005 is marked unsupported because it is attached to the unsupported sentence; p358-002 supports the third sentence."}
+  },
+  "agent_hrr_B_1shot": {
+   "q09": {"reason": "Grade 2: generic correct answer (binding floor above equilibrium -> excess supply) supported by p105-003; does not use the gold living-wage example, which the generic question does not require."},
+   "m02": {"reason": "Grade 2 (loosely worded): 20% premium supported by p346-003; 'fewer jobs' supported by p348-002's discussion of job losses under a union wage, though gold sentence (p348-000) was not retrieved with a single search (context_evidence=False)."},
+   "ud3": {"abstention_correct": false,
+           "reason": "Not counted as abstention: content says the textbook does not state the number (no hallucinated figure), but the agent called submit_answer instead of abstain, so status=answered. Protocol failure, not a hallucination. Both citations support the statements made."}
+  },
+  "agent_hrr_B_v2": {
+   "q22": {"reason": "Grade 2 (fixed vs agent_hrr_B): p357-005 ends mid-sentence, the neighbor rule appended p358-000 ('...wage based on their productivity, then other profit-seeking employers can hire these workers'), so the full Becker argument is in context and correctly attributed."},
+   "q18": {"reason": "Grade 2: surplus from p86-000; 'deadweight loss of J + K' is in p88-003 (read in full)."},
+   "m02": {"reason": "Grade 2: 20% from p346-003; employment downside from p348-001 (Qd at union wage < Qe), equivalent to gold p348-000."},
+   "ud3": {"reason": "Abstained (fixed vs agent_hrr_B_1shot type failure)."}
+  },
+  "agent_hrr_B_1shot_v2": {
+   "q22": {"reason": "Grade 2 (fixed): neighbor p358-000 completes the cut-off Becker sentence."},
+   "q09": {"reason": "Grade 2: generic binding-floor -> excess supply answer supported by p105-003; agent states it relies on the minimum-wage example."},
+   "ud3": {"reason": "Abstained (fixed: v1 one-search agent submitted a 'not stated' answer instead)."}
+  }
+ }
+}

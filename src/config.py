@@ -56,3 +56,22 @@ RETRIEVAL_CONFIGS = {
     "hybrid_rerank_B500": {"method": "hybrid_rerank", "index": "B500", "candidates": 50, "rrf_k": 60, "rerank_pool": 20,
                         "hypothesis": "Improvement 1 + 2 combined."},
 }
+
+# Agent configurations: retriever + loop/context settings. `max_searches` is a loop guard
+# chosen for this corpus, not a requirement of the assignment.
+AGENT_CONFIGS = {
+    "agent_dense_B": {"retriever": "dense_B", "top_k": 5, "budget_chars": 4000, "max_searches": 4, "effort": "medium",
+                      "hypothesis": "Baseline agent: Day 6 dense retriever behind a search tool."},
+    "agent_hrr_B":   {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 4, "effort": "medium",
+                      "hypothesis": "Retriever chosen in stage 1 (best dev Hit@3) gives the model better evidence per call."},
+    "agent_hrr_B_1shot": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 1, "effort": "medium",
+                      "hypothesis": "Ablation: one search only (classic RAG). Tests whether multi-search helps multi-hop/paraphrase."},
+    # Added after reading dev failures q22 (agent_hrr_B) and ud3 (agent_hrr_B_1shot).
+    "agent_hrr_B_v2": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 4,
+                       "effort": "medium", "prompt": "v2", "neighbors": True,
+                       "hypothesis": "Improvement 3+4: neighbor chunk for cut-off hits + rules against completing "
+                                     "cut-off text and against 'not in the book' answers -> fixes q22/ud3 types."},
+    "agent_hrr_B_1shot_v2": {"retriever": "hybrid_rerank_B", "top_k": 5, "budget_chars": 4000, "max_searches": 1,
+                       "effort": "medium", "prompt": "v2", "neighbors": True,
+                       "hypothesis": "Same changes on the cheaper one-search agent."},
+}

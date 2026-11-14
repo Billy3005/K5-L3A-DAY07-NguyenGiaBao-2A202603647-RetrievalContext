@@ -1,0 +1,32 @@
+{
+  "decided_on": "dev only",
+  "rules": "benchmark/README.md, locked in commit a6ab742",
+  "retrieval": {
+    "selected": "hybrid_rerank_B",
+    "baseline": "dense_B",
+    "trace": [
+      "rule 1 Hit@3 (best 22, tie <=1): ['hybrid_rerank_B']"
+    ],
+    "allowed_on_test": [
+      "dense_B",
+      "hybrid_rerank_B"
+    ]
+  },
+  "agent": {
+    "selected": "agent_hrr_B_1shot",
+    "baseline": "agent_dense_B",
+    "trace": [
+      "rule 1 eligibility (abstention >= 3/4, no errors): ['agent_dense_B', 'agent_hrr_B', 'agent_hrr_B_1shot', 'agent_hrr_B_v2', 'agent_hrr_B_1shot_v2']",
+      "rule 2 grounded mean (best 2.00, tie <=0.1): ['agent_dense_B', 'agent_hrr_B', 'agent_hrr_B_1shot', 'agent_hrr_B_v2', 'agent_hrr_B_1shot_v2']",
+      "rule 3 fewest false abstentions (0): ['agent_dense_B', 'agent_hrr_B', 'agent_hrr_B_1shot', 'agent_hrr_B_v2', 'agent_hrr_B_1shot_v2']",
+      "rule 4 cost per question: agent_hrr_B_1shot=$0.000501, agent_hrr_B_1shot_v2=$0.000516, agent_dense_B=$0.000642, agent_hrr_B=$0.000648, agent_hrr_B_v2=$0.000668 -> agent_hrr_B_1shot"
+    ],
+    "allowed_on_test": [
+      "agent_dense_B",
+      "agent_hrr_B_1shot",
+      "agent_hrr_B_1shot_v2"
+    ],
+    "secondary_reported_not_selectable": "agent_hrr_B_1shot_v2",
+    "secondary_reason": "Declared before test: reported only to check whether the v2 fixes (neighbor chunk + abstain rule) generalize; it cannot replace the selection."
+  }
+}
