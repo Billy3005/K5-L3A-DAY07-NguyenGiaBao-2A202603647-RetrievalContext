@@ -1,0 +1,13 @@
+{
+ "units": 2194,
+ "by_type": {
+  "figure": 198,
+  "text": 1829,
+  "table": 167
+ },
+ "embedding_model": "intfloat/multilingual-e5-base",
+ "dim": 768,
+ "passage_prefix": "passage: ",
+ "units_sha256": "66737ae9aeb80f51133e25e09611d6ee871215d7a27ea456d538cbab8452146f",
+ "build_seconds": 737.9
+}

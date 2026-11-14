@@ -1,0 +1,38 @@
+{
+ "pdf": "principles-microeconomics-3e_-_WEB.pdf",
+ "pdf_pages": 595,
+ "indexed_pages": [
+  21,
+  576
+ ],
+ "skipped": {
+  "1-20": "cover, copyright, table of contents, preface (no subject content)",
+  "577-595": "references list and alphabetical index (bibliographic / navigational only)"
+ },
+ "units": {
+  "figure": 198,
+  "text": 1829,
+  "table": 167
+ },
+ "uncaptioned_images": 38,
+ "tables_without_rows": [
+  "p0139-tab5.4",
+  "p0140-tab5.4",
+  "p0209-tab8.5",
+  "p0210-tab8.5"
+ ],
+ "pages_without_units": [
+  58,
+  198,
+  226,
+  248,
+  270,
+  316,
+  368,
+  396,
+  416,
+  444,
+  480,
+  546
+ ]
+}

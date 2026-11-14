@@ -12,3 +12,6 @@ starter/results/
 
 # Local archives (e.g. zips made for sharing); never commit
 *.zip
+advanced/data/crops/
+advanced/data/pages/
+advanced/data/index/embeddings.npy

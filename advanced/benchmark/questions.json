@@ -1,0 +1,1089 @@
+{
+ "document": "OpenStax, Principles of Microeconomics 3e (web PDF, 595 pages, (c)2026 Rice University, CC BY-NC-SA 4.0), https://openstax.org/details/books/principles-microeconomics-3e",
+ "page_numbers": "PDF page numbers (1-based). Printed page = PDF page - 12.",
+ "split_rule": "Dev and test were split by figure/table: no figure or table is used in both splits. Written and split before any agent run on this document.",
+ "gold_source": "Every expected answer was read from the original rendered PDF page (crop or page image), not from the extracted text or the AI figure descriptions.",
+ "questions": [
+  {
+   "id": "adv-d01",
+   "split": "dev",
+   "group": "table",
+   "answerable": true,
+   "question": "In the textbook's car example of supply shifts, at a price of $20,000, what is the quantity supplied after supply decreases to S1 and after it increases to S2?",
+   "expected": "16.5 million cars after the decrease to S1; 19.8 million after the increase to S2 (original S0: 18.0 million).",
+   "must_include": [
+    "16.5 million",
+    "19.8 million"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0072-tab3.5",
+      "page": 72,
+      "where": "Table 3.5, row $20,000, columns 'Decrease to S1' and 'Increase to S2'"
+     }
+    ]
+   ],
+   "reason": "Row/column lookup in a table."
+  },
+  {
+   "id": "adv-d02",
+   "split": "dev",
+   "group": "table",
+   "answerable": true,
+   "question": "In the table comparing income distribution in select countries, which country has the largest share of income going to the first (lowest) quintile, and in which survey year?",
+   "expected": "India, 8.1% (survey year 2011).",
+   "must_include": [
+    "India",
+    "8.1%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0384-tab15.7",
+      "page": 384,
+      "where": "Table 15.7, column First Quintile"
+     }
+    ]
+   ],
+   "reason": "Comparison down one column across 8 rows."
+  },
+  {
+   "id": "adv-d03",
+   "split": "dev",
+   "group": "table",
+   "answerable": true,
+   "question": "According to the table on the range in size of U.S. firms, what percentage of firms had 500 or more employees, and what share of total paid employment did those firms account for?",
+   "expected": "17,236 firms = 0.30% of firms, employing 50.9 million = 49.8% of total employment (2010 Census data).",
+   "must_include": [
+    "0.30%",
+    "49.8%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0169-tab7.1",
+      "page": 169,
+      "where": "Table 7.1, row '500 or more'"
+     }
+    ]
+   ],
+   "reason": "Two cells in one row with units (% of firms vs % of employment)."
+  },
+  {
+   "id": "adv-d04",
+   "split": "dev",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the rent-control price ceiling diagram, after demand shifts to D1 and the ceiling stays at $500, what quantities are supplied and demanded, and how large is the shortage?",
+   "expected": "Quantity supplied 15,000 rental units, quantity demanded 19,000 units, shortage of 4,000 units.",
+   "must_include": [
+    "15,000",
+    "19,000",
+    "4,000"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0084-fig3.21",
+      "page": 84,
+      "where": "Figure 3.21: dashed lines at 15 and 19 (thousands) under the $500 ceiling"
+     },
+     {
+      "unit": "p0084-tab3.7",
+      "page": 84,
+      "where": "Table 3.7, row $500"
+     }
+    ]
+   ],
+   "reason": "Read quantities from the diagram's dashed lines; Table 3.7 is equivalent evidence."
+  },
+  {
+   "id": "adv-d05",
+   "split": "dev",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the diagram of banks as financial intermediaries, what flows from borrowers back to banks, and what flows from banks to savers?",
+   "expected": "Borrowers to banks: repayment of loans and interest payments. Banks to savers: withdrawals and interest payments.",
+   "must_include": [
+    "repayment of loans",
+    "interest payments",
+    "withdrawals"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0424-fig17.3",
+      "page": 424,
+      "where": "Figure 17.3, lower arrows"
+     }
+    ]
+   ],
+   "reason": "Arrow labels and directions exist only in the image."
+  },
+  {
+   "id": "adv-d06",
+   "split": "dev",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the living wage price floor diagram, what is the original equilibrium, and at a wage floor of $12 per hour how many workers are demanded and supplied?",
+   "expected": "Equilibrium E at 1,200 workers and $10/hour; at $12, quantity demanded 700 and quantity supplied 1,600 (surplus of 900 workers).",
+   "must_include": [
+    "1,200",
+    "$10",
+    "700",
+    "1,600"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0104-fig4.4",
+      "page": 104,
+      "where": "Figure 4.4, point E and dashed lines at $12"
+     },
+     {
+      "unit": "p0105-tab4.4",
+      "page": 105,
+      "where": "Table 4.4, rows $10 and $12"
+     }
+    ]
+   ],
+   "reason": "Diagram point labels and axis positions; Table 4.4 is equivalent evidence."
+  },
+  {
+   "id": "adv-d07",
+   "split": "dev",
+   "group": "chart",
+   "answerable": true,
+   "question": "According to the chart of the median/average sale price of new single-family homes, approximately what was the price in 2021, and in which year did prices peak before the 2008-2009 decline?",
+   "expected": "About $460,000 in 2021 (accept $440,000-$470,000); the earlier peak was in 2007 at roughly $310,000 (accept 2006-2007, $300,000-$320,000).",
+   "must_include": [
+    "2021",
+    "2007"
+   ],
+   "tolerance": "values read from the axis: 2021 in [$440k, $470k]; peak year 2006 or 2007",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0432-fig17.7",
+      "page": 432,
+      "where": "Figure 17.7, right end of the line and the 2007 local maximum"
+     }
+    ]
+   ],
+   "reason": "No data labels: values must be read from the axis."
+  },
+  {
+   "id": "adv-d08",
+   "split": "dev",
+   "group": "chart",
+   "answerable": true,
+   "question": "In the chart of real federal spending on CTC, EITC and TANF, which program had the highest spending at the end of the period (2016), and roughly how much did each of the three programs spend then?",
+   "expected": "EITC highest at about $61-62 billion (2011 dollars); CTC about $51 billion; TANF about $18 billion.",
+   "must_include": [
+    "EITC"
+   ],
+   "tolerance": "EITC 58-64, CTC 48-54, TANF 16-21 (billions of 2011 dollars)",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0377-fig15.5",
+      "page": 377,
+      "where": "Figure 15.5, right end of the three lines"
+     }
+    ]
+   ],
+   "reason": "Three-series line chart without data labels."
+  },
+  {
+   "id": "adv-d09",
+   "split": "dev",
+   "group": "chart",
+   "answerable": true,
+   "question": "In the chart of the Dow Jones Industrial Index and the Standard & Poor's 500 from 1965 to 2021, which index is measured on the right-hand axis and what range does that axis cover, and around which year did both indexes hit their sharp low before rising steadily through 2021?",
+   "expected": "The Dow Jones is on the right-hand axis (0 to 36,000); the S&P 500 is on the left (0 to 3,800). Both fell to a sharp low around 2009 (the 2008-2009 crash) and then rose steadily to their highest values in 2021.",
+   "must_include": [
+    "Dow Jones",
+    "36,000",
+    "2009"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0429-fig17.6",
+      "page": 429,
+      "where": "Figure 17.6 axes and the 2009 trough"
+     }
+    ]
+   ],
+   "reason": "Dual-axis chart: the axis-series mapping is only in the image."
+  },
+  {
+   "id": "adv-d10",
+   "split": "dev",
+   "group": "multihop",
+   "answerable": true,
+   "question": "In the car example, at a price of $22,000, what is the original quantity demanded (D0) and the original quantity supplied (S0), and is there a surplus or a shortage?",
+   "expected": "Quantity demanded 17.0 million (Table 3.4) and quantity supplied 20.0 million (Table 3.5): a surplus of 3.0 million cars.",
+   "must_include": [
+    "17.0 million",
+    "20.0 million",
+    "surplus"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0068-tab3.4",
+      "page": 68,
+      "where": "Table 3.4, row $22,000, Original Quantity Demanded D0"
+     }
+    ],
+    [
+     {
+      "unit": "p0072-tab3.5",
+      "page": 72,
+      "where": "Table 3.5, row $22,000, Original Quantity Supplied S0"
+     }
+    ]
+   ],
+   "reason": "Two tables on different pages plus a comparison."
+  },
+  {
+   "id": "adv-d11",
+   "split": "dev",
+   "group": "multihop",
+   "answerable": true,
+   "question": "How did the share of U.S. income received by the highest quintile change from 1967 to 2020, and which country in the international income-distribution table has a larger top-quintile share than the United States?",
+   "expected": "43.6% in 1967 to 52.2% in 2020 (+8.6 points, Table 15.5); Brazil has a larger fifth-quintile share, 57.8% (Table 15.7).",
+   "must_include": [
+    "43.6%",
+    "52.2%",
+    "Brazil",
+    "57.8%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0381-tab15.5",
+      "page": 381,
+      "where": "Table 15.5, row 1967, Highest Quintile"
+     }
+    ],
+    [
+     {
+      "unit": "p0382-tab15.5",
+      "page": 382,
+      "where": "Table 15.5 (continued), row 2020"
+     },
+     {
+      "unit": "p0384-tab15.7",
+      "page": 384,
+      "where": "Table 15.7, United States row"
+     }
+    ],
+    [
+     {
+      "unit": "p0384-tab15.7",
+      "page": 384,
+      "where": "Table 15.7, Brazil row, Fifth Quintile"
+     }
+    ]
+   ],
+   "reason": "A table split across two pages plus a second table."
+  },
+  {
+   "id": "adv-d12",
+   "split": "dev",
+   "group": "multihop",
+   "answerable": true,
+   "question": "In the gasoline example, at a price of $1.20 per gallon, what are the quantity demanded and the quantity supplied, and how large is the gap?",
+   "expected": "Quantity demanded 700 million gallons (Table 3.1), quantity supplied 550 million gallons (Table 3.2): excess demand (shortage) of 150 million gallons.",
+   "must_include": [
+    "700",
+    "550",
+    "150"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0061-tab3.1",
+      "page": 61,
+      "where": "Table 3.1, row $1.20"
+     },
+     {
+      "unit": "p0065-tab3.3",
+      "page": 65,
+      "where": "Table 3.3, row $1.20"
+     }
+    ],
+    [
+     {
+      "unit": "p0063-tab3.2",
+      "page": 63,
+      "where": "Table 3.2, row $1.20"
+     },
+     {
+      "unit": "p0065-tab3.3",
+      "page": 65,
+      "where": "Table 3.3, row $1.20"
+     }
+    ]
+   ],
+   "reason": "Demand and supply schedules on different pages (Table 3.3 combines them)."
+  },
+  {
+   "id": "adv-d13",
+   "split": "dev",
+   "group": "text",
+   "answerable": true,
+   "question": "What weaknesses do the four-firm concentration ratio and the Herfindahl-Hirschman Index share, according to the textbook?",
+   "expected": "They assume the market is well defined (only measuring how sales are divided), and they assume competitive conditions across industries are similar enough that one measure can be applied to all (plus other weaknesses listed in the same passage).",
+   "must_include": [
+    "well-defined market"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0276-t2",
+      "page": 276,
+      "where": "paragraph 'Both the four-firm concentration ratio and the Herfindahl-Hirschman index share some weaknesses'"
+     }
+    ]
+   ],
+   "reason": "Synthesis of a list from prose."
+  },
+  {
+   "id": "adv-d14",
+   "split": "dev",
+   "group": "text",
+   "answerable": true,
+   "question": "According to the textbook, how does a multinational employer like Coca-Cola or McDonald's choose production technology in a high-wage economy versus a lower-wage country?",
+   "expected": "In high-wage economies (U.S., Canada, Japan, Western Europe) it uses technologies that conserve on workers and use more machines; in lower-wage countries (e.g. Mexico, China) it uses more workers and less machinery.",
+   "must_include": [
+    "machines",
+    "more workers"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0186-t0",
+      "page": 186,
+      "where": "first paragraph"
+     }
+    ]
+   ],
+   "reason": "Conditional statement in prose."
+  },
+  {
+   "id": "adv-d15",
+   "split": "dev",
+   "group": "text",
+   "answerable": true,
+   "question": "How did Netflix's 2011 price increase affect its number of U.S. subscribers?",
+   "expected": "About 24.6 million U.S. subscribers before; 810,000 cancelled, dropping the total to 23.79 million (by June 2013 there were 36 million streaming subscribers).",
+   "must_include": [
+    "24.6 million",
+    "810,000",
+    "23.79 million"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0140-t0",
+      "page": 140,
+      "where": "'How did the 60% price increase in 2011 end up for Netflix?'"
+     }
+    ]
+   ],
+   "reason": "Numbers inside a narrative paragraph."
+  },
+  {
+   "id": "adv-d16",
+   "split": "dev",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What was the average sale price of new homes in the United States in 2023?",
+   "expected": "Abstain: the home-price chart (Figure 17.7) ends in 2021 and no 2023 home price appears in the text.",
+   "check": "Figure 17.7 x-axis ends at 2021; regex search of all units and figure descriptions for new-home prices in 2022/2023 finds nothing.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-d17",
+   "split": "dev",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What share of national income goes to the highest quintile in Japan, according to the textbook's international income-distribution data?",
+   "expected": "Abstain: Japan is not in Table 15.7 (U.S., Germany, Brazil, Mexico, China, India, Russia, Nigeria).",
+   "check": "Table 15.7 rows checked on the original page; 'Japan' never appears near 'quintile' anywhere in the book.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-d18",
+   "split": "dev",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What percentage of U.S. firms had 500 or more employees in 2020?",
+   "expected": "Abstain: Table 7.1 gives 2010 Census data (0.30%); there is no 2020 figure.",
+   "check": "Table 7.1 caption says 2010; no other firm-size distribution in the book.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t01",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "Among the largest American unions in 2021, which union ranks fourth by membership, and how many members does it have?",
+   "expected": "AFSCME (American Federation of State, County, and Municipal Workers) with 1.6 million members. (NEA 3.0M, SEIU 2.0M, AFT 1.7M, AFSCME 1.6M; the Teamsters, listed fourth in the table, have only 1.4M.)",
+   "must_include": [
+    "AFSCME or American Federation of State, County, and Municipal",
+    "1.6 million"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0346-tab14.6",
+      "page": 346,
+      "where": "Table 14.6, Membership column"
+     }
+    ]
+   ],
+   "reason": "Ranking requires reading values, not row order (row 4 is IBT 1.4M)."
+  },
+  {
+   "id": "adv-t02",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "In 2020, how many percentage points higher was the poverty rate for females than for males?",
+   "expected": "2.4 percentage points (females 12.6%, males 10.2%).",
+   "must_include": [
+    "12.6%",
+    "10.2%",
+    "2.4"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0371-tab15.1",
+      "page": 371,
+      "where": "Table 15.1, rows Females and Males"
+     }
+    ]
+   ],
+   "reason": "Two cells plus a subtraction."
+  },
+  {
+   "id": "adv-t03",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "In the 2020 international comparison of health care spending, how much more did the United States spend per person than Germany, and what was U.S. female life expectancy at birth?",
+   "expected": "$4,217 more ($10,948 vs $6,731); U.S. female life expectancy 80.2 years.",
+   "must_include": [
+    "$10,948",
+    "$6,731",
+    "4,217",
+    "80.2"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0409-tab16.2",
+      "page": 409,
+      "where": "Table 16.2, rows United States and Germany; columns spending and female life expectancy"
+     }
+    ]
+   ],
+   "reason": "Correct column choice (male vs female life expectancy) plus a subtraction."
+  },
+  {
+   "id": "adv-t04",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "In the table of annual returns on S&P 500 stocks, which period had a negative total annual return, and what were its capital gains and dividends components?",
+   "expected": "2000-2009: total annual return -1.00%, capital gains -2.70%, dividends 1.70%.",
+   "must_include": [
+    "2000",
+    "-1.00%",
+    "-2.70%",
+    "1.70%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0430-tab17.2",
+      "page": 430,
+      "where": "Table 17.2, row 2000-2009"
+     }
+    ]
+   ],
+   "reason": "Find the row by condition, then read three columns."
+  },
+  {
+   "id": "adv-t05",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "Which industry protected by import tariffs or quotas has the highest annual cost to U.S. consumers per job saved, and how much higher is that cost than for dairy products?",
+   "expected": "Sugar, $826,000 per job saved; $141,000 more than dairy products ($685,000).",
+   "must_include": [
+    "Sugar",
+    "$826,000",
+    "141,000"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0490-tab20.2",
+      "page": 490,
+      "where": "Table 20.2, rows Sugar and Dairy products"
+     }
+    ]
+   ],
+   "reason": "Max over a column plus a subtraction."
+  },
+  {
+   "id": "adv-t06",
+   "split": "test",
+   "group": "table",
+   "answerable": true,
+   "question": "In 2018, how much U.S. research and development funding came from industry, and what percentage of total R&D funding was that?",
+   "expected": "$426.0 billion, 70.3% of the $606.1 billion total.",
+   "must_include": [
+    "$426.0 billion",
+    "70.3%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0325-tab13.3",
+      "page": 325,
+      "where": "Table 13.3, row Industry"
+     }
+    ]
+   ],
+   "reason": "Lookup with units ($ billions vs percent)."
+  },
+  {
+   "id": "adv-t07",
+   "split": "test",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the circular flow diagram, which two labeled flows go from households to firms?",
+   "expected": "B: Payment for goods and services, and C: Labor services.",
+   "must_include": [
+    "payment for goods and services",
+    "labor services"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0029-fig1.7",
+      "page": 29,
+      "where": "Figure 1.7, arrows B and C pointing to Firms"
+     }
+    ]
+   ],
+   "reason": "Arrow direction and letter labels exist only in the image."
+  },
+  {
+   "id": "adv-t08",
+   "split": "test",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the pollution charge diagram, what is the marginal cost of reducing particle emissions by 30 pounds and by 40 pounds, and by how much will the firm reduce emissions when the charge is $1,000?",
+   "expected": "$900 at 30 pounds and $1,500 at 40 pounds; with a $1,000 charge the firm reduces emissions by 30 pounds.",
+   "must_include": [
+    "$900",
+    "$1,500",
+    "30 pounds"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0297-fig12.3",
+      "page": 297,
+      "where": "Figure 12.3, points at 30 and 40 pounds; caption"
+     }
+    ]
+   ],
+   "reason": "The $1,500 point is only in the diagram; $900 and 30 pounds are also in the caption."
+  },
+  {
+   "id": "adv-t09",
+   "split": "test",
+   "group": "diagram",
+   "answerable": true,
+   "question": "According to the diagram of what comes into and goes out of an insurance company, what are the sources of money coming in and the uses of money going out?",
+   "expected": "Money in: premiums from customers and investment income. Money out: payments to customers, expenses, and profits or losses.",
+   "must_include": [
+    "premiums",
+    "investment income",
+    "payments to customers",
+    "expenses",
+    "profits or losses"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0405-fig16.2",
+      "page": 405,
+      "where": "Figure 16.2"
+     }
+    ]
+   ],
+   "reason": "Flow diagram labels."
+  },
+  {
+   "id": "adv-t10",
+   "split": "test",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the diagrams of the sugar trade between Brazil and the United States, what is the price of sugar with no trade in Brazil and in the United States?",
+   "expected": "Brazil: 12 cents per pound; United States: 24 cents per pound.",
+   "must_include": [
+    "12 cents",
+    "24 cents"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0484-fig20.2",
+      "page": 484,
+      "where": "Figure 20.2, 'Price with no trade' lines in panels (a) and (b)"
+     },
+     {
+      "unit": "p0484-tab20.1",
+      "page": 484,
+      "where": "Table 20.1, rows where quantity supplied = quantity demanded (12 cents Brazil, 24 cents U.S.)"
+     }
+    ]
+   ],
+   "reason": "Read labelled equilibrium lines in two panels; Table 20.1 is equivalent evidence."
+  },
+  {
+   "id": "adv-t11",
+   "split": "test",
+   "group": "diagram",
+   "answerable": true,
+   "question": "In the voting cycle diagram about choosing a dish, which option beats which, and by what vote?",
+   "expected": "Lasagna beats turkey 2-1, roast beef beats lasagna 2-1, and turkey beats roast beef 2-1, so the votes form a cycle with no majority winner.",
+   "must_include": [
+    "lasagna beats turkey",
+    "roast beef beats lasagna",
+    "turkey beats roast beef",
+    "2-1"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0453-fig18.2",
+      "page": 453,
+      "where": "Figure 18.2 arrow labels"
+     }
+    ]
+   ],
+   "reason": "Cycle relation drawn as arrows."
+  },
+  {
+   "id": "adv-t12",
+   "split": "test",
+   "group": "chart",
+   "answerable": true,
+   "question": "According to the chart of mergers submitted for review by the Federal Trade Commission from 1999 to 2012, in which year were the fewest mergers submitted and how many, and which year had the most?",
+   "expected": "Fewest in 2009 with 716; most in 2000 with 4,926.",
+   "must_include": [
+    "2009",
+    "716",
+    "2000",
+    "4,926"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0273-fig11.2",
+      "page": 273,
+      "where": "Figure 11.2(a) bar labels"
+     }
+    ]
+   ],
+   "reason": "Bar chart min/max from data labels."
+  },
+  {
+   "id": "adv-t13",
+   "split": "test",
+   "group": "chart",
+   "answerable": true,
+   "question": "According to the 2012 chart of earnings and unemployment by education, how much higher were median weekly earnings with a master's degree than with a bachelor's degree, and what were the two unemployment rates?",
+   "expected": "$234 more per week ($1,300 vs $1,066); unemployment 3.5% (master's) vs 4.5% (bachelor's).",
+   "must_include": [
+    "$1,300",
+    "$1,066",
+    "234",
+    "3.5%",
+    "4.5%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0163-fig6.6",
+      "page": 163,
+      "where": "Figure 6.6 bars for Master's and Bachelor's"
+     }
+    ]
+   ],
+   "reason": "Two series in a bar chart plus a subtraction."
+  },
+  {
+   "id": "adv-t14",
+   "split": "test",
+   "group": "chart",
+   "answerable": true,
+   "question": "According to the chart of immigration to the United States since 1900, which decade had the most immigrants and roughly how many, and which decade had the fewest?",
+   "expected": "Most in 2000-2009, about 11.4 million (accept 11.0-11.7 million); fewest in 1930-1939 (under 1 million, about 0.7 million).",
+   "must_include": [
+    "2000",
+    "1930"
+   ],
+   "tolerance": "max decade value in [11.0M, 11.7M]",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0360-fig14.17",
+      "page": 360,
+      "where": "Figure 14.17 bars"
+     }
+    ]
+   ],
+   "reason": "No data labels; bars must be compared and read from the axis."
+  },
+  {
+   "id": "adv-t15",
+   "split": "test",
+   "group": "chart",
+   "answerable": true,
+   "question": "In the chart of patents filed and granted from 1990 to 2020, in which year were the most patent applications filed, and approximately how many?",
+   "expected": "2019, about 670,000 applications filed (accept 650,000-690,000); about 390,000 were granted that year.",
+   "must_include": [
+    "2019"
+   ],
+   "tolerance": "filed in [650k, 690k]",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0324-fig13.4",
+      "page": 324,
+      "where": "Figure 13.4, tallest 'Patents filed' bar"
+     }
+    ]
+   ],
+   "reason": "Grouped bar chart without data labels."
+  },
+  {
+   "id": "adv-t16",
+   "split": "test",
+   "group": "chart",
+   "answerable": true,
+   "question": "In the chart of wage ratios by sex and race, which ratio was higher at the end of the data (around 2015), and approximately what were the two values?",
+   "expected": "Female-to-male was higher, about 79-80%; Black-to-white was about 73%. (The lines crossed in the early 2000s.)",
+   "must_include": [
+    "female-to-male"
+   ],
+   "tolerance": "female-to-male in [77, 81]; Black-to-white in [71, 75]",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0354-fig14.15",
+      "page": 354,
+      "where": "Figure 14.15, right end of both lines"
+     }
+    ]
+   ],
+   "reason": "Two-line chart without data labels; legend read from line labels."
+  },
+  {
+   "id": "adv-t17",
+   "split": "test",
+   "group": "multihop",
+   "answerable": true,
+   "question": "Based on the hours needed to produce oil and corn in Saudi Arabia and the United States, which country has the comparative advantage in corn, and what is its opportunity cost of one bushel of corn in terms of oil?",
+   "expected": "The United States (1 hour per bushel of corn vs 2 hours per barrel of oil); its opportunity cost of one bushel of corn is 1/2 barrel of oil (Saudi Arabia's is 4 barrels).",
+   "must_include": [
+    "United States",
+    "1/2"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0462-tab19.1",
+      "page": 462,
+      "where": "Table 19.1"
+     }
+    ],
+    [
+     {
+      "unit": "p0463-tab19.4",
+      "page": 463,
+      "where": "Table 19.4, United States row, corn column"
+     }
+    ]
+   ],
+   "reason": "Inputs table on one page, derived opportunity-cost table on the next."
+  },
+  {
+   "id": "adv-t18",
+   "split": "test",
+   "group": "multihop",
+   "answerable": true,
+   "question": "Approximately what was the peak share of U.S. wage and salary workers who were union members, when was it, and what was U.S. union density in 2012 according to the international comparison table?",
+   "expected": "Peak of roughly 28% (accept 27-29%) in the mid-1950s (Figure 14.11); U.S. union density in 2012 was 11.1% (Table 14.8), with union coverage 12.5%.",
+   "must_include": [
+    "1950s or 1954/1955",
+    "11.1%"
+   ],
+   "tolerance": "peak in [27, 29]%",
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0347-fig14.11",
+      "page": 347,
+      "where": "Figure 14.11 line maximum"
+     }
+    ],
+    [
+     {
+      "unit": "p0351-tab14.8",
+      "page": 351,
+      "where": "Table 14.8, United States row"
+     }
+    ]
+   ],
+   "reason": "Chart reading plus a table on another page."
+  },
+  {
+   "id": "adv-t19",
+   "split": "test",
+   "group": "multihop",
+   "answerable": true,
+   "question": "In 2020, how did the poverty rate for children under age 18 compare with the overall U.S. poverty rate?",
+   "expected": "16.1% for under-18 (Table 15.1) vs 11.4% overall in 2020 (Figure 15.2): 4.7 percentage points higher.",
+   "must_include": [
+    "16.1%",
+    "11.4%"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0371-tab15.1",
+      "page": 371,
+      "where": "Table 15.1, row Under age 18"
+     }
+    ],
+    [
+     {
+      "unit": "p0371-fig15.2",
+      "page": 371,
+      "where": "Figure 15.2 caption / 2020 point"
+     }
+    ]
+   ],
+   "reason": "Combines a table and a figure."
+  },
+  {
+   "id": "adv-t20",
+   "split": "test",
+   "group": "multihop",
+   "answerable": true,
+   "question": "How did membership in the United Auto Workers (UAW) change from 1985 to 2021, according to the textbook?",
+   "expected": "About 975,000 members in 1985 (text, p. 351; roughly 390,000 by 2015) and 408,000 in 2021 (Table 14.6): a fall of about 567,000.",
+   "must_include": [
+    "975,000",
+    "408,000"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0351-t0",
+      "page": 351,
+      "where": "'membership in the United Auto Workers, which was 975,000 in 1985'"
+     }
+    ],
+    [
+     {
+      "unit": "p0346-tab14.6",
+      "page": 346,
+      "where": "Table 14.6, row UAW"
+     }
+    ]
+   ],
+   "reason": "Text on one page and a table on another."
+  },
+  {
+   "id": "adv-t21",
+   "split": "test",
+   "group": "text",
+   "answerable": true,
+   "question": "According to the textbook, how does import competition contribute to the decline in union membership, and which unions have continued to grow?",
+   "expected": "From the 1960s U.S. carmakers and steelmakers faced Japanese and European competition; as imports rose, jobs in these unionized sectors fell, and import competition also reduces unions' bargaining power. Unions that organize public-sector workers, who are not threatened by import competition, have continued to grow.",
+   "must_include": [
+    "Japanese and European",
+    "bargaining power",
+    "public-sector"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0350-t2",
+      "page": 350,
+      "where": "'A second explanation ... import competition'"
+     }
+    ],
+    [
+     {
+      "unit": "p0351-t0",
+      "page": 351,
+      "where": "'Import competition not only decreases the employment ... public-sector workers'"
+     }
+    ]
+   ],
+   "reason": "Argument spread over a page break."
+  },
+  {
+   "id": "adv-t22",
+   "split": "test",
+   "group": "text",
+   "answerable": true,
+   "question": "In the lysine price-fixing example, which company was the primary U.S. producer and how large was the lysine industry each year?",
+   "expected": "Archer Daniels Midland (ADM); a $600 million-a-year industry.",
+   "must_include": [
+    "Archer Daniels Midland",
+    "$600 million"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0261-t1",
+      "page": 261,
+      "where": "'Lysine, a $600 million-a-year industry'"
+     }
+    ]
+   ],
+   "reason": "Facts inside a case-study paragraph."
+  },
+  {
+   "id": "adv-t23",
+   "split": "test",
+   "group": "text",
+   "answerable": true,
+   "question": "According to the textbook, under what condition do farmers benefit from an agricultural price floor, who pays the costs, and roughly how much do high-income areas spend supporting farmers?",
+   "expected": "Farmers benefit if the government buys the excess supply (or pays others to buy it); taxpayers and consumers of food pay the costs. High-income areas (U.S., Europe, Japan) spend roughly $1 billion per day supporting farmers.",
+   "must_include": [
+    "excess supply",
+    "taxpayers",
+    "$1 billion per day"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0085-t3",
+      "page": 85,
+      "where": "'Economists estimate that the high-income areas ... $1 billion per day'"
+     }
+    ]
+   ],
+   "reason": "Conditional claim plus a number."
+  },
+  {
+   "id": "adv-t24",
+   "split": "test",
+   "group": "text",
+   "answerable": true,
+   "question": "When a perfectly competitive firm is making losses, under what condition should it keep producing in the short run instead of shutting down?",
+   "expected": "It should keep operating if price (revenue) covers its average variable cost (variable costs), because fixed costs must be paid anyway; if price falls below average variable cost (the shutdown point), it should shut down immediately.",
+   "must_include": [
+    "average variable cost"
+   ],
+   "evidence_groups": [
+    [
+     {
+      "unit": "p0210-t0",
+      "page": 210,
+      "where": "'remaining open requires the price to exceed the firm's average variable cost'"
+     },
+     {
+      "unit": "p0209-t2",
+      "page": 209,
+      "where": "Yoga Center discussion of covering variable costs"
+     },
+     {
+      "unit": "p0212-fig8.7",
+      "page": 212,
+      "where": "Figure 8.7 caption (shutdown point zones)"
+     }
+    ]
+   ],
+   "reason": "Decision rule stated in prose (several equivalent passages)."
+  },
+  {
+   "id": "adv-t25",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "How many members did the Communications Workers of America have in 2021?",
+   "expected": "Abstain: the union is not in Table 14.6 or anywhere else in the book.",
+   "check": "Table 14.6 checked on the original page; 'Communications Workers' appears nowhere in the indexed text.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t26",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What was the overall U.S. poverty rate in 2021?",
+   "expected": "Abstain: Figure 15.2 and Table 15.1 stop at 2020; the only 2021 statistic nearby is the share of families headed by single mothers.",
+   "check": "Regex search for poverty rate with 2021 finds only p384 (single-mother families, 23%), not a poverty rate.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t27",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "How many mergers were submitted to the Federal Trade Commission for review in 2016?",
+   "expected": "Abstain: Figure 11.2(a) covers 1999-2012 only.",
+   "check": "Figure 11.2 axis ends at 2012; the text on p.273 gives no 2016 count.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t28",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What was health care spending per person in Japan in 2020?",
+   "expected": "Abstain: Table 16.2 lists only the U.S., Germany, France, Canada and the U.K.",
+   "check": "Table 16.2 checked on the original page; no 'Japan' near 'health' anywhere.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t29",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "What was the total annual return on S&P 500 stocks in 2022?",
+   "expected": "Abstain: Table 17.2 ends with 2021 (28.71%).",
+   "check": "Table 17.2 last row is 2021; 2022 mentions in the book (Netflix, Facebook prices, gold) are not S&P returns.",
+   "evidence_groups": []
+  },
+  {
+   "id": "adv-t30",
+   "split": "test",
+   "group": "unanswerable",
+   "answerable": false,
+   "question": "How many patents were granted in the United States in 2021?",
+   "expected": "Abstain: Figure 13.4 ends in 2020.",
+   "check": "Figure 13.4 axis ends at 2020; no patent counts for 2021 in the text.",
+   "evidence_groups": []
+  }
+ ]
+}
