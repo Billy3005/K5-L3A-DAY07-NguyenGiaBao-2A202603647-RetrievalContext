@@ -56,6 +56,8 @@ def sheet(split, config):
         lines += [f"**Agent ({r['status']}):** {r['answer']}", ""]
         if r.get("abstain_reason"):
             lines += [f"**Abstain reason:** {r['abstain_reason']}", ""]
+        if q.get("check"):
+            lines += [f"**How absence was checked:** {q['check']}", ""]
         lines += [f"**Draft reason:** {lab['reason']}", ""]
         shown = []
         for c in r.get("citation_details", []):
@@ -64,6 +66,9 @@ def sheet(split, config):
             for a in g:
                 if a["unit"] not in [s[0] for s in shown]:
                     shown.append((a["unit"], "gold"))
+        for e in r["events"]:
+            if e["event"] == "view" and e["unit"] not in [s[0] for s in shown]:
+                shown.append((e["unit"], "viewed by agent"))
         for uid, kind in shown:
             u = units.get(uid)
             if not u:
